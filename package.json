@@ -2,7 +2,13 @@
   "name": "rsaf-design-system",
   "version": "0.1.0",
   "private": true,
+  "resolutions": {
+    "**/@emotion/styled": "^11.0.0"
+    },
   "dependencies": {
+    "@emotion/react": "^11.9.0",
+    "@emotion/styled": "^11.8.1",
+    "@mui/material": "^5.6.1",
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^12.1.5",
     "@testing-library/user-event": "^13.5.0",
@@ -15,12 +21,24 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "storybook": "start-storybook -p 6006 -s public",
+    "build-storybook": "build-storybook -s public"
   },
   "eslintConfig": {
     "extends": [
       "react-app",
       "react-app/jest"
+    ],
+    "overrides": [
+      {
+        "files": [
+          "**/*.stories.*"
+        ],
+        "rules": {
+          "import/no-anonymous-default-export": "off"
+        }
+      }
     ]
   },
   "browserslist": {
@@ -34,5 +52,18 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@storybook/addon-actions": "^6.4.21",
+    "@storybook/addon-essentials": "^6.4.21",
+    "@storybook/addon-interactions": "^6.4.21",
+    "@storybook/addon-links": "^6.4.21",
+    "@storybook/builder-webpack5": "^6.4.21",
+    "@storybook/manager-webpack5": "^6.4.21",
+    "@storybook/node-logger": "^6.4.21",
+    "@storybook/preset-create-react-app": "^4.1.0",
+    "@storybook/react": "^6.4.21",
+    "@storybook/testing-library": "0.0.9",
+    "webpack": "^5.72.0"
   }
 }
