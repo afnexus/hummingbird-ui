@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'SerpentineSans';
+    src: local('SerpentineSans'), url(../../assets/fonts/serpentine_sans_icg_boldoblique.ttf) format('truetype');
+    font-weight: bold
+  }
+
+.font-face-gm {
+    font-family: 'SerpentineSans';
+}

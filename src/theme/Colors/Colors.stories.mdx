@@ -1,0 +1,34 @@
+<!-- Colors.stories.mdx -->
+
+import { Meta, ColorPalette, ColorItem } from '@storybook/addon-docs';
+import { Colors } from './Colors';
+
+<Meta title="Colors" />
+
+<ColorPalette>
+  <ColorItem 
+    title="colors.primary" 
+    subtitle="DarkBlue" 
+    colors={{ DarkBlue: Colors.primary }}
+  />
+    <ColorItem 
+    title="colors.secondary" 
+    subtitle="LightBlue" 
+    colors={{ LightBlue: Colors.secondary }}
+  />
+    <ColorItem 
+    title="colors.darkgrey" 
+    subtitle="DarkGrey" 
+    colors={{ DarkGrey: Colors.darkgrey }}
+  />
+    <ColorItem 
+    title="colors.lightgrey" 
+    subtitle="LightGrey" 
+    colors={{ LightGrey: Colors.lightgrey }}
+  />
+    <ColorItem 
+    title="colors.white" 
+    subtitle="White" 
+    colors={{ White: Colors.white }}
+  />
+</ColorPalette>
