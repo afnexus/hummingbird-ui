@@ -6,4 +6,4 @@ export default {
     component: BCnoMui
 }
 
-export const Default = () => <BCnoMui />;
+export const Default = () => <BCnoMui routeMain="HOME" route1="LINK 1" route2="LINK 2"/>;

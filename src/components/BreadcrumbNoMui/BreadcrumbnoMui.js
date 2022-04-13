@@ -40,19 +40,19 @@ export const spacer={
 }
 
 
-const BCnoMui = () => {
+const BCnoMui = ({routeMain, route1, route2}) => {
   return (
     <nav className='breadcrumbs' style={bcStyle}>
         <ul style={bcStyle1}>
-            <li style={bcStyle2}><a href="#" style={aStyle}>HOME</a></li>
+            <li style={bcStyle2}><a href="#" style={aStyle}>{routeMain}</a></li>
 
             <p style={spacerStyle}>{spacer.default}</p>
 
-            <li style={bcStyle2}><a href="#" style={aStyle}>LINK1</a></li>
+            <li style={bcStyle2}><a href="#" style={aStyle}>{route1}</a></li>
 
             <p style={spacerStyle}>{spacer.default}</p>
 
-            <li style={bcStyle2}><a href="#" style={aStyle}>LINK2</a></li>
+            <li style={bcStyle2}><a href="#" style={aStyle}>{route2}</a></li>
         </ul>
     </nav>
   )
