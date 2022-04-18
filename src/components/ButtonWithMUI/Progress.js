@@ -25,6 +25,10 @@ const OuterBoxStyle = {
     marginRight:"10%",
 }
 
+const OuterText = {
+    textAlign:"center",
+}
+
 const BorderLinearProgress = styled(LinearProgress)(({ theme }) => ({
     height: 19,
     borderRadius: 10,
@@ -44,7 +48,7 @@ function ProgressBar(props) {
             <BorderLinearProgress style={OuterBoxStyle} variant="determinate" value={props.value} />
 
             <Box sx={{ minWidth: 35 }}>
-                <Typography variant="body2" color="#C7DDFF">{`${Math.round(props.value,)}%`} Completed</Typography>
+                <Typography style={OuterText} variant="body2" color="#C7DDFF">{`${Math.round(props.value,)}%`} Completed</Typography>
             </Box>
         </Box>
     </ThemeProvider>
