@@ -1,5 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
+import Progress from './components/ButtonWithMUI/Progress';
 
 function App() {
   return (
@@ -18,6 +19,8 @@ function App() {
           Learn React
         </a>
       </header>
+
+      <Progress value={"70"} > </Progress>
     </div>
   );
 }
