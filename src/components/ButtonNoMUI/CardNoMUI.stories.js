@@ -7,8 +7,7 @@ export default {
     component: CardNoMUI
 }
 
-export const Default = () => <CardNoMUI 
-Image={Image} 
+export const Default = () => <CardNoMUI  
 Title={"About us"} 
 paragraph={"A brief description of who we are"}
 />;
