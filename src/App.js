@@ -20,7 +20,7 @@ function App() {
         </a>
       </header>
 
-      <Progress value={"70"} > </Progress>
+      <Progress value={"84"} > </Progress>
     </div>
   );
 }
