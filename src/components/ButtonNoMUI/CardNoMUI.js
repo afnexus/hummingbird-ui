@@ -2,6 +2,7 @@ import React from 'react';
 import { Colors } from '../../theme/Colors/Colors';
 import '../../theme/Typography/Typography.css';
 import logo from '../../logo.svg';
+import PropTypes from 'prop-types';
 //import Image from '../../Image.svg';
 
 
@@ -37,4 +38,22 @@ function CardNoMUI(props) {
         </>
     );
 }
+
+CardNoMUI.defaultProps = {
+    Title:"About us", 
+    paragraph: "A brief description of who we are",
+}
+
+CardNoMUI.propTypes = {
+    Title: PropTypes.oneOf(['About Us', 'Hello World', 'I am ...',]),
+      /**
+   * What do you want to put on the paragraph?
+   */
+    paragraph: PropTypes.string,
+          /**
+   * What is the title of the card?
+   */
+};
+
+
 export default CardNoMUI;
