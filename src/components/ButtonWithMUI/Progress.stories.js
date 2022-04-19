@@ -6,4 +6,4 @@ export default {
     component: Progress
 }
 
-export const Default = () => <Progress value="84"/>;
+export const Default = () => <Progress value="84" BarBackgroundColor="#385682" BarColor="#5297FF" textColor="#C7DDFF"/>;
