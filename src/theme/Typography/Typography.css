@@ -1,9 +1,11 @@
+/* Import font face */
 @font-face {
     font-family: 'SerpentineSans';
     src: local('SerpentineSans'), url(../../assets/fonts/serpentine_sans_icg_boldoblique.ttf) format('truetype');
     font-weight: bold
   }
 
+/* Create class for font face */
 .font-face-gm {
     font-family: 'SerpentineSans';
 }
