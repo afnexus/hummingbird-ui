@@ -1,3 +1,5 @@
+// https://github.com/palantir/blueprint/blob/develop/packages/colors/src/colors.ts
+
 export const Colors = {
     primary: '#1e5077',
     secondary: '#8cbcd5',
