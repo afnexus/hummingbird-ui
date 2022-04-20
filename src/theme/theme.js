@@ -10,9 +10,6 @@ export const muitheme = createTheme({
       main: '#edf2ff',
     },
   },
-<<<<<<< Updated upstream
-});
-=======
 
   typography: {
     fontFamily: 'SerpentineSans',
@@ -68,4 +65,3 @@ export const muitheme = createTheme({
     },
   },
 });
->>>>>>> Stashed changes
