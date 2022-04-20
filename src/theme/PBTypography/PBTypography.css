@@ -1,0 +1,27 @@
+@font-face {
+  font-family: 'SerpentineSans';
+  src: local('SerpentineSans'), url(../../assets/fonts/serpentine_sans_icg_boldoblique.ttf) format('truetype');
+  font-weight: bold;
+  
+}
+
+.font-face-gm {
+  font-family: 'SerpentineSans';
+}
+
+h1{
+  font-family: 'SerpentineSans';
+  font-size: 96;
+  letter-spacing: 15.36px;
+  font-weight: bold;
+  font-style: oblique;
+}
+
+.buttonMedium{
+  font-family: 'Eurocine';
+  font-size: 15;
+  letter-spacing: -1.28px;
+  font-weight: normal;
+  font-style: normal;
+  text-transform: uppercase;
+}

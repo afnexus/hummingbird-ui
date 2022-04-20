@@ -4,7 +4,6 @@ import Progress from './Progress';
 export default {
     title: 'Components/Progress',
     component: Progress,
-    
 };
 
 const Template = args => <Progress {...args} />
