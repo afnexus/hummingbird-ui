@@ -6,4 +6,5 @@ export const Colors = {
     darkgrey: '#7483a3',
     lightgrey: '#acb3c3',
     white: '#edf6fa'
+    // pangboon
 }
