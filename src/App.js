@@ -1,15 +1,18 @@
 import './App.css';
 import { Colors } from './theme/Colors/Colors';
-
+import ButtonWithMUI from './components/ButtonWithMUI/ButtonWithMUI';
 function App() {
 
-  const textStyle= {
-    color: Colors.pridefault,
+  
+  const bodyStyles ={
+    backgroundColor: 'black',
+    
   }
 
   return (
-    <div className="App">
-      <h1 style={textStyle}>Testing</h1>
+    <div className="App" style={bodyStyles}>
+      
+      <ButtonWithMUI text='nice'/>
       
     </div>
   );

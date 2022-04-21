@@ -85,7 +85,7 @@ export const semanticColors = {
 }
 
 export const nightPrimary = {
-    nightPri:'#9E9FD6',
+    nightPri:'#9EBFD6',
     nightPriLight: '#ABC8DD',
     nightPriLighter: '#BDD2E4',
     nightPriExtraLight: '#CDDDEB',
