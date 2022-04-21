@@ -1,13 +1,17 @@
 import { createTheme } from '@mui/material/styles';
-// import Colors.js file here
+import { Colors } from '../theme/Colors/Colors'
 
-export const muitheme = createTheme({
+export const dayMode = createTheme({
   palette: {
     primary: {
-      main: '#800080',
+      main: Colors.priDefault,
+      light: Colors.priLight,
     },
     secondary: {
-      main: '#edf2ff',
+      main: Colors.secDefault,
+    },
+    neutral: {
+      main: Colors.white,
     },
   },
 });
