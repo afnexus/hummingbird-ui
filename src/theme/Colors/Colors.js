@@ -7,4 +7,5 @@ export const Colors = {
     lightgrey: '#acb3c3',
     white: '#edf6fa'
     // pangboon
+    // master
 }
