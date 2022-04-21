@@ -3,15 +3,20 @@
   font-family: 'SerpentineSans';
   src: local('SerpentineSans'), url(../../assets/fonts/serpentine_sans_icg_boldoblique.ttf) format('truetype');
   font-weight: bold;
-  
 }
+
+@font-face{
+  font-family: 'EurocineRegular';
+  src: local('EurocineRegular'), url(../../assets/fonts/Eurocine\ Regular.otf) format('truetype');
+}
+
+@font-face{
+  font-family: 'EurocineOblique';
+  src: local('EurocineOblique'), url(../../assets/fonts/Eurocine\ Oblique.otf) format('truetype');
+}
+
 
 /* Create class for font face */
 .font-face-gm {
-<<<<<<< Updated upstream
-    font-family: 'SerpentineSans';
-}
-=======
   font-family: 'SerpentineSans';
 }
->>>>>>> Stashed changes
