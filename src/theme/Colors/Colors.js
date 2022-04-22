@@ -105,7 +105,7 @@ export const nightSecondary= {
     nightSecExtraLight:'#E6FDFF',
     nightSecUltraLight: '#F0FFFF',
     nightSecExtraDark:'#26D1E2',
-    nightSecUltraDark: '#1AEA5',
+    nightSecUltraDark: '#1AEAE5',
 }
 
 export const nightNeutral ={
@@ -114,10 +114,10 @@ export const nightNeutral ={
     nightGreyLighter: '#ECF2F6',
     nightGreyDark: '#D5DDE4',
     nightGreyDarker: '#CDD5DA',
-    nightWhite: '#FFFFF',
+    nightWhite: '#FFFFFF',
     nightGreyExtraLight: '#F2F8FA',
     nightGreyUltraLight: '#F8FCFD',
-    nightGreyExtraDark: 'C3CCCF',
+    nightGreyExtraDark: '#C3CCCF',
     nightGreyUltraDark: '#B7C0C2',
 }
 
@@ -140,7 +140,7 @@ export const nightSemantic = {
     nightRedExtraLight: '#FFD2D2',
     nightRedUltraLight: '#FFD7D7',
     nightRedExtraDark: '#FF643A',
-    nigthRedUltraDark: '#FF6320',
+    nightRedUltraDark: '#FF6320',
 
     nightYellow: '#F3E44A',
     nightYellowLight: '#F5E663',
@@ -149,10 +149,10 @@ export const nightSemantic = {
     nightYellowDarker: '#F8D741',
     nightYellowExtraLight: '#F9EDA4',
     nightYellowUltraLight: '#FBF3CB',
-    nightYellowExtraDark: 'FAD141',
-    nightYellowUltraDark: 'FDCA43',
+    nightYellowExtraDark: '#FAD141',
+    nightYellowUltraDark: '#FDCA43',
     
-    nightOrange: 'FBAE50',
+    nightOrange: '#FBAE50',
     nightOrangeLight: '#FCB468',
     nightOrangeLighter: '#FCBE86',
     nightOrangeDark: '#FC9E48',
