@@ -45,14 +45,15 @@ CardNoMUI.defaultProps = {
 }
 
 CardNoMUI.propTypes = {
-    Title: PropTypes.oneOf(['About Us', 'Hello World', 'I am ...',]),
-      /**
-   * What do you want to put on the paragraph?
-   */
-    paragraph: PropTypes.string,
-          /**
-   * What is the title of the card?
-   */
+    /**
+    * What is the title of the card?
+    */
+Title: PropTypes.oneOf(['About Us', 'Hello World', 'I am ...',]),
+    /**
+    * What do you want to put on the paragraph?
+    */
+paragraph: PropTypes.string,
+
 };
 
 

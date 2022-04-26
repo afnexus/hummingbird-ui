@@ -3,6 +3,7 @@ import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
 import LinearProgress, { linearProgressClasses } from '@mui/material/LinearProgress';
 import { styled } from '@mui/material/styles';
+import PropTypes from 'prop-types';
 
 const OuterBoxStyle = {
   margin:"10px", 
@@ -53,5 +54,28 @@ function ProgressBar(props) {
 
   );
 }
+
+ProgressBar.propTypes = {
+  /**
+  * Value of the bar/text
+  */
+  value: PropTypes.number, 
+  
+  /**
+  * Background Color of the bar
+  */  
+BarBackgroundColor: PropTypes.string,
+
+  /**
+  * Color of the bar
+  */
+BarColor: PropTypes.string,
+
+  /**
+  * Color of the text
+  */
+textColor: PropTypes.string,
+};
+
 
 export default ProgressBar;
