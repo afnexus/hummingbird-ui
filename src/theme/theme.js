@@ -25,37 +25,31 @@ export const muitheme = createTheme({
     h2:{
       fontFamily: 'SerpentineSans',
       fontSize: 64,
-
       letterSpacing: '10px',
-
     },
 
     h3:{
       fontFamily: 'SerpentineSans',
       fontSize: 48,
       letterSpacing:'7.5px',
-
     },
 
     h4:{
       fontFamily: 'SerpentineSans',
       fontSize: 36,
       letterSpacing:'-0.9px',
-
     },
 
     h5:{
       fontFamily: 'EurocineOblique',
       fontSize: 24,
       letterSpacing:'3.6px',
- 
     },
 
     h6:{
       fontFamily: 'EurocineRegular',
       fontSize: 20,
       letterSpacing:'3px',
-
     },
 
     subtitle1:{
