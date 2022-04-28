@@ -12,115 +12,126 @@ export const muitheme = createTheme({
   },
 
   typography: {
-    fontFamily: 'SerpentineSans',
-    fontSize: 12,
-    //fontWeightRegular:'400',
+    //fontSize: 12,
+    fontFamily:'LatoRegular',
 
     h1:{
-      fontFamily: 'SerpentineSans',
-      fontSize: 96,
-      letterSpacing:'15.36px',
+      fontFamily: 'LatoBlack',
+      fontSize: 80,
+      //letterSpacing:'2%',
+      lineHeight:'88px',
     },
-
     h2:{
-      fontFamily: 'SerpentineSans',
+      fontFamily: 'LatoBold',
       fontSize: 64,
-      letterSpacing: '10px',
+      //letterSpacing: '2%',
+      lineHeight:'72px',
     },
-
     h3:{
-      fontFamily: 'SerpentineSans',
+      fontFamily: 'LatoBlack',
       fontSize: 48,
-      letterSpacing:'7.5px',
+      //letterSpacing:'7.5px',
+      lineHeight:'56px',
     },
-
     h4:{
-      fontFamily: 'SerpentineSans',
-      fontSize: 36,
-      letterSpacing:'-0.9px',
+      fontFamily: 'LatoBlack',
+      fontSize: 32,
+      //letterSpacing:'-0.9px',
+      lineHeight:'40px',
     },
-
     h5:{
-      fontFamily: 'EurocineOblique',
+      fontFamily: 'LatoBlack',
       fontSize: 24,
-      letterSpacing:'3.6px',
+      //letterSpacing:'3.6px',
+      lineHeight:'32px',
+    },
+    h6:{
+      fontFamily: 'LatoBlack',
+      fontSize: 16,
+      //letterSpacing:'3px',
+      lineHeight:'24px',
     },
 
-    h6:{
-      fontFamily: 'EurocineRegular',
-      fontSize: 20,
-      letterSpacing:'3px',
-    },
 
     subtitle1:{
-      fontFamily: 'EurocineOblique',
+      fontFamily: 'LatoRegular',
       fontSize: 16,
-      letterSpacing:'2.5px',
+      //letterSpacing:'2.5px',
+      lineHeight:'24px',
+      fontWeight:"500", //Use 500 cus no have LatoMedium Font type
 
     },
     subtitle2:{
-      fontFamily: 'EurocineOblique',
+      fontFamily: 'LatoRegular',
       fontSize: 14,
-      letterSpacing:'2px',
-
+      //letterSpacing:'2px',
+      lineHeight:'22px',
+      fontWeight:"500", //Use 500 cus no have LatoMedium Font type
     },
 
     body1:{
-      fontFamily: 'EurocineRegular',
+      fontFamily: 'LatoRegular',
       fontSize: 16,
-      letterSpacing:'0.24px',
+      //letterSpacing:'0.24px',
+      lineHeight:'24px',
 
     },
     body2:{
-      fontFamily: 'EurocineRegular',
+      fontFamily: 'LatoRegular',
       fontSize: 14,
-      letterSpacing:'0.24px',
-
+      //letterSpacing:'0.24px',
+      lineHeight:'22px',
     },
 
+
     buttonLarge:{
-      fontFamily: 'EurocineRegular',
-      fontSize: 15,
-      letterSpacing:'-1.28px',
+      fontFamily: 'LatoBold',
+      fontSize: 16,
+      //letterSpacing:'-1.28px',
       textTransform: 'uppercase',
     },
     buttonMedium:{
-      fontFamily: 'EurocineRegular',
+      fontFamily: 'LatoBold',
       fontSize: 14,
-      letterSpacing:'-1.28px',
+      //letterSpacing:'-1.28px',
       textTransform: 'uppercase',
     },
     buttonSmall:{
-      fontFamily: 'EurocineRegular',
-      fontSize: 13,
-      letterSpacing:'-1.28px',
+      fontFamily: 'LatoBold',
+      fontSize: 12,
+      //letterSpacing:'-1.28px',
       textTransform: 'uppercase',
     },
 
     caption:{
-      fontFamily: 'EurocineRegular',
+      fontFamily: 'LatoRegular',
       fontSize: 12,
-      letterSpacing:'1.6px',
+      //letterSpacing:'1.6px',
+      lineHeight:'20px',
     },
     inputLabel:{
-      fontFamily: 'EurocineRegular',
-      fontSize: 12,
-      letterSpacing:'1.55px',
+      fontFamily: 'LatoRegular',
+      fontSize: 16,
+      //letterSpacing:'1.55px',
+      lineHeight:'24px',
     },
     helpText:{
-      fontFamily: 'EurocineRegular',
+      fontFamily: 'LatoRegular',
       fontSize: 12,
-      letterSpacing:'0.9px',
+      //letterSpacing:'0.9px',
+      lineHeight:'20px',
     },
     inputText:{
-      fontFamily: 'EurocineRegular',
+      fontFamily: 'LatoRegular',
       fontSize: 16,
-      letterSpacing:'1.45px',
+      //letterSpacing:'1.45px',
+      lineHeight:'24px',
     },
     toolTip:{
-      fontFamily: 'EurocineRegular',
-      fontSize: 10,
-      letterSpacing:'0.05px',
+      fontFamily: 'LatoRegular',
+      fontSize: 14,
+      //letterSpacing:'0.05px',
+      lineHeight:'22px',
     },
   },
 });
