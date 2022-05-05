@@ -3,401 +3,517 @@
 <!-- https://storybook.js.org/docs/ember/writing-docs/doc-block-colorpalette -->
 
 import { Meta, ColorPalette, ColorItem } from '@storybook/addon-docs';
-import { Colors } from './Colors';
+import { Colors, primary, secondary, neutrals, green, red, yellow, orange, purple, nPrimary, nSecondary, nNeutrals, nGreen, nRed, nYellow, nPurple, nOrange, transShades, transTints} from './Colors';
 
 <Meta title="Colors" />
 
+# README :
+
+This story book consists of two color themes, Light Theme and Dark Theme. Specific Colors can be used anytime with the right name.  
+In order to switch between themes, user can use useState hooks and remember to wrap full code in ThemeProvider and CssBaseline.  
+E.g.<br /><br />
+import React, {useState} from 'react';  
+import { ThemeProvider } from '@mui/material';  
+import { lightTheme,darkTheme } from '../theme';  
+import { CssBaseline } from '@mui/material';  <br /><br />
+export const LightDark = () => {**
+    const [darkMode, setDarkMode] = useState(false);**   
+  return (
+    <ThemeProvider theme={darkMode ? darkTheme : lightTheme}>
+        <CssBaseline />
+        <ButtonWithMUI color='primary' text='Color'/>
+        <button onClick = {() => setDarkMode (!darkMode)}>switch</button>
+    </ThemeProvider>
+  )
+}
+
+<br/>
+
+
+##
+# Light Theme
+<br />
+<br />
 <ColorPalette>
   <ColorItem 
-    title="Colors.priDefault " 
-    subtitle="Primary Colors" 
-    colors={{ PrimaryColor : Colors.priDefault }}
+    title="Primary Color" 
+    subtitle="primary[400]" 
+    colors={{ 400 : primary[400] }}
   />
     <ColorItem 
-    title="Colors.pri..." 
-    subtitle="Light Shades of Primary Color" 
+    title="Light Shades of Primary" 
+    subtitle="primary[50/100/200/300]" 
     colors={{
-      priLight : Colors.priLight,
-      priLighter : Colors.priLighter,
-      priExtraLight: Colors.priExtraLight,
-      priUltraLight: Colors.priUltraLight,
+      50 : primary[50],
+      100 : primary[100],
+      200: primary[200],
+      300: primary[300],
      }}
   />
     <ColorItem 
-    title="Colors.pri..." 
-    subtitle="Dark Shades of Primary Color" 
+    title="Dark Shades of Primary" 
+    subtitle="primary[500/600/700/800]" 
     colors={{ 
-      priDark : Colors.priDark,
-      priDarker : Colors.priDarker,
-      priExtraDark : Colors.priExtraDark,
-      priUltraDark : Colors.priUltraDark,
+      500 : primary[500],
+      600 : primary[600],
+      700 : primary[700],
+      800 : primary[800],
      }}
   />
     <ColorItem 
-    title="Colors.secDefault" 
-    subtitle="Secondary Colors" 
-    colors={{ SecondaryColor: Colors.secDefault }}
+    title="Secondary Color" 
+    subtitle="secondary[400]" 
+    colors={{ 400: secondary[400] }}
   />
     <ColorItem 
-    title="Colors.sec..." 
-    subtitle="Light Shades of Secondary Color" 
+    title="Light Shades of Secondary" 
+    subtitle="secondary[50/100/200/300]" 
     colors={{ 
-      secLight: Colors.secLight,
-      secLighter: Colors.secLighter,
-      secExtraLight: Colors.secExtraLight,
-      secUltraLight: Colors.secUltraLight,
+      50 : secondary[50],
+      100 : secondary[100],
+      200 : secondary[200],
+      300 : secondary[300],
     }}
   />
   <ColorItem 
-    title="Colors.sec..." 
-    subtitle="Dark Shades of Secondary Color" 
+    title="Dark Shades of Secondary" 
+    subtitle="secondary[500/600/700/800]" 
     colors={{ 
-      secDark: Colors.secDark,
-      secDarker: Colors.secDarker,
-      secExtraDark: Colors.secExtraDark,
-      secUltraDark: Colors.secUltraDark,
+      500 : secondary[500],
+      600 : secondary[600],
+      700 : secondary[700],
+      800 : secondary[800],
     }}
   />
   <ColorItem 
-    title="Colors.white/back" 
-    subtitle="Neutral Colors" 
+    title="Neutrals" 
+    subtitle="neutrals[50/500/1000]" 
     colors={{ 
-      White: Colors.white,
-      Black: Colors.black,
-      Grey: Colors.grey,
+      50 : neutrals[50],
+      500: neutrals[500],
+      1000 : neutrals[1000],
     }}
   />
   <ColorItem 
-    title="Colors.grey..." 
-    subtitle="Light Shades of Grey" 
+    title="Light Shades of Grey" 
+    subtitle="neutrals[100/200/300/400]" 
     colors={{ 
-      greyLight: Colors.greyLight,
-      greyLighter: Colors.greyLighter,
-      greyExtraLight: Colors.greyExtraLight,
-      greyUltraLight: Colors.greyUltraLight,
+      100 : neutrals[100],
+      200 : neutrals[200],
+      300 : neutrals[300],
+      400 : neutrals[400],
     }}
   />
   <ColorItem 
-    title="Colors.grey..." 
-    subtitle="Dark Shades of Grey" 
+    title="Dark Shades of Grey" 
+    subtitle="neutrals[600/700/800/900]" 
     colors={{ 
-      greyDark: Colors.greyDark,
-      greyDarker: Colors.greyDarker,
-      greyExtraDark: Colors.greyExtraDark,
-      greyUltraDark: Colors.greyUltraDark,
+      600 : neutrals[600],
+      700 : neutrals[700],
+      800 : neutrals[800],
+      900 : neutrals[900],
     }}
   />
   <ColorItem 
-    title="Colors.r/g/y/o/p" 
-    subtitle="Semantic Colors" 
+    title="Green" 
+    subtitle="green[400]" 
     colors={{ 
-      red: Colors.red,
-      green: Colors.green,
-      yellow: Colors.yellow,
-      orange: Colors.orange,
-      purple: Colors.purple,
+      400 : green[400],
     }}
   />
   <ColorItem 
-    title="Colors.red..." 
-    subtitle="Light Shades of Red" 
+    title="Light Shades of Green" 
+    subtitle="green[50/100/200/300]" 
     colors={{ 
-      redLight: Colors.redLight,
-      redLighter: Colors.redLighter,
-      redExtraLight: Colors.redExtraLight,
-      redUltraLight: Colors.redUltraLight,
+      50 : green[50],
+      100 : green[100],
+      200 : green[200],
+      300 : green[300],
     }}
   />
   <ColorItem 
-    title="Colors.red..." 
-    subtitle="Dark Shades of Red" 
+    title="Dark Shades of Green" 
+    subtitle="green[500/600/700/800]" 
     colors={{ 
-      redDark: Colors.redDark,
-      redDarker: Colors.redDarker,
-      redExtraDark: Colors.redExtraDark,
-      redUltraDark: Colors.redUltraDark, 
+      500 : green[500],
+      600 : green[600],
+      700 : green[700],
+      800 : green[800], 
     }}
   />
   <ColorItem 
-    title="Colors.green.." 
-    subtitle="Light Shades of Green" 
+    title="Red" 
+    subtitle="red[400]" 
     colors={{ 
-      greenLight: Colors.greenLight,
-      greenLighter: Colors.greenLighter,
-      greenExtraLight: Colors.greenExtraLight, 
-      greenUltraLight: Colors.greenUltraLight, 
+      400 : red[400],
     }}
   />
   <ColorItem 
-    title="Colors.green..." 
-    subtitle="Dark Shades of Green" 
+    title="Light Shades of Red" 
+    subtitle="red[50/100/200/300]" 
     colors={{ 
-      greenDark: Colors.greenDark, 
-      greenDarker: Colors.greenDarker,
-      greenExtraDark: Colors.greenExtraDark,
-      greenUltraDark: Colors.greenUltraDark, 
+      50 : red[50],
+      100 : red[100],
+      200 : red[200],
+      300 : red[300],
     }}
   />
   <ColorItem 
-    title="Colors.yellow..." 
-    subtitle="Light Shades of Yellow" 
+    title="Dark Shades of Red" 
+    subtitle="red[500/600/700/800]" 
     colors={{ 
-      yellowLight: Colors.yellowLight,
-      yellowLighter: Colors.yellowLighter, 
-      yellowExtraLight: Colors.yellowExtraLight, 
-      yellowUltraLight: Colors.yellowUltraLight, 
+      500 : red[500],
+      600 : red[600],
+      700 : red[700],
+      800 : red[800],
     }}
   />
   <ColorItem 
-    title="Colors.yellow..." 
-    subtitle="Dark Shades of Yellow" 
+    title="Yellow" 
+    subtitle="yellow[400]" 
     colors={{ 
-     yellowDark: Colors.yellowDark,
-     yellowDarker: Colors.yellowDarker,
-     yellowExtraDark: Colors.yellowExtraDark,
-     yellowUltraDark: Colors.yellowUltraDark,
+     400 : yellow[400],
     }}
   />
   <ColorItem 
-    title="Colors.orange..." 
-    subtitle="Light Shades of Orange" 
+    title="Light Shades of Yellow" 
+    subtitle="yellow[50/100/200/300]" 
     colors={{ 
-      orangeLight: Colors.orangeLight,
-      orangeLighter: Colors.orangeLighter,
-      orangeExtraLight: Colors.orangeExtraLight,
-      orangeUltraLight: Colors.orangeUltraLight, 
+      50 : yellow[50],
+      100 : yellow[100],
+      200 : yellow[200],
+      300 : yellow[300], 
     }}
   />
   <ColorItem 
-    title="Colors.orange..." 
-    subtitle="Dark Shades of Orange" 
+    title="Dark Shades of Yellow" 
+    subtitle="yellow[500/600/700/800]" 
     colors={{ 
-      orangeDark: Colors.orangeDark,
-      orangeDarker: Colors.orangeDarker,
-      orangeExtraDark: Colors.orangeExtraDark,
-      orangeUltraDark: Colors.orangeUltraDark,
+      500 : yellow[500],
+      600 : yellow[600],
+      700 : yellow[700],
+      800 : yellow[800],
     }}
   />
   <ColorItem 
-    title="Colors.purple..." 
-    subtitle="Light Shades of Purple" 
+    title="Orange" 
+    subtitle="orange[400]" 
     colors={{ 
-      purpleLight: Colors.purpleLight,
-      purpleLighter: Colors.purpleLighter,
-      purpleExtraLight: Colors.purpleExtraLight,
-      purpleUltraLight: Colors.purpleUltraLight,
+      400 : orange[400],
     }}
   />
   <ColorItem 
-    title="Colors.purple..." 
-    subtitle="Dark Shades of Purple" 
+    title="Light Shades of Orange" 
+    subtitle="orange[50/100/200/300]" 
     colors={{ 
-      purpleDark: Colors.purpleDark,
-      purpleDarker: Colors.purpleDarker,
-      purpleExtraDark: Colors.purpleExtraDark,
-      purpleUltraDark: Colors.purpleUltraDark,
+      50 : orange[50],
+      100 : orange[100],
+      200 : orange[200],
+      300 : orange[300],
+    }}
+  />
+  <ColorItem 
+    title="Dark Shades of Orange" 
+    subtitle="orange[500/600/700/800]" 
+    colors={{ 
+      500 : orange[500],
+      600 : orange[600],
+      700 : orange[700],
+      800 : orange[800],
+    }}
+  />
+  <ColorItem 
+    title="Purple" 
+    subtitle="purple[400]" 
+    colors={{ 
+      400 : purple[400],
+    }}
+  />
+  <ColorItem 
+    title="Light Shades of Purple" 
+    subtitle="purple[50/100/200/300]" 
+    colors={{ 
+      50 : purple[50],
+      100 : purple[100],
+      200 : purple[200],
+      300 : purple[300],
+    }}
+  />
+  <ColorItem 
+    title="Dark Shades of Purple" 
+    subtitle="purple[500/600/700/800]" 
+    colors={{ 
+      500 : purple[500],
+      600 : purple[600],
+      700 : purple[700],
+      800 : purple[800],
     }}
   />
 </ColorPalette>
 
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-
+##
+# Dark Theme
+<br />
+<br />
 <ColorPalette>
   <ColorItem 
-    title="Colors.nightPri " 
-    subtitle="Primary Colors(Night)" 
-    colors={{ nightPri : Colors.nightPri }}
+    title="Primary" 
+    subtitle="nPrimary[400]" 
+    colors={{ 400  : nPrimary[400] }}
   />
   <ColorItem 
-    title="Colors.nightPri... " 
-    subtitle="Light Shades of Pri(Night)" 
+    title="Light Shades of Primary" 
+    subtitle="nPrimary[50/100/200/300]" 
     colors={{ 
-      nightPriLight : Colors.nightPriLight,
-      nightPriLighter : Colors.nightPriLighter,
-      nightPriExtraLight : Colors.nightPriExtraLight,
-      nightPriUltraLight: Colors.nightPriUltraLight,
+      50 : nPrimary[50],
+      100 : nPrimary[100],
+      200 : nPrimary[200],
+      300 : nPrimary[300],
     }}
   />
   <ColorItem 
-    title="Colors.nightPri... " 
-    subtitle="Dark Shades of Pri(Night)" 
+    title="Dark Shades of Primary" 
+    subtitle="nPrimary[500/600/700/800]" 
     colors={{ 
-      priDark : Colors.priDark, 
-      priDarker: Colors.priDarker,
-      priExtraDark: Colors.priExtraDark,
-      priUltraDark: Colors.priUltraDark,
+      500 : nPrimary[500],
+      600 : nPrimary[600],
+      700 : nPrimary[700],
+      800 : nPrimary[800],
     }}
   />
   <ColorItem 
-    title="Colors.nightSec " 
-    subtitle="Secondary Colors(Night)" 
-    colors={{ nightSec : Colors.nightSec }}
+    title="Secondary" 
+    subtitle="nSecondary[400]" 
+    colors={{ 400 : nSecondary[400] }}
   />
   <ColorItem 
-    title="Colors.nightSec... " 
-    subtitle="Light Shades of Sec(Night)" 
+    title="Light Shades of Secondary" 
+    subtitle="nSecondary[50/100/200/300]" 
     colors={{ 
-      nightSecLight : Colors.nightSecLight,
-      nightSecLighter: Colors.nightSecLighter,
-      nightSecExtraLight : Colors.nightSecExtraLight,
-      nightSecUltraLight : Colors.nightSecUltraLight,
+      50 : nSecondary[50],
+      100 : nSecondary[100],
+      200 : nSecondary[200],
+      300 : nSecondary[300],
     }}
   />
   <ColorItem 
-    title="Colors.nightSec... " 
-    subtitle="Dark Shades of Sec(Night)" 
+    title="Dark Shades of Secondary" 
+    subtitle="nSecondary[500/600/700/800]" 
     colors={{ 
-      nightSecDark : Colors.nightSecDark,
-      nightSecDarker: Colors.nightSecDarker,
-      nightSecExtraDark : Colors.nightSecExtraDark,
-      nightSecUltraDark : Colors.nightSecUltraDark,
+      500 : nSecondary[500],
+      600 : nSecondary[600],
+      700 : nSecondary[700],
+      800 : nSecondary[800],
     }}
   />
   <ColorItem 
-    title="Colors.nightNeutral " 
-    subtitle="Neutral Colors(Night)" 
+    title="Neutrals" 
+    subtitle="nNeutrals[400/900]" 
     colors={{ 
-      nightGrey : Colors.nightGrey,
-      nightWhite: Colors.nightWhite,
+      400 : nNeutrals[400],
+      900 : nNeutrals[900],
     }}
   />
   <ColorItem 
-    title="Colors.nightGrey... " 
-    subtitle="Light Shades of Grey(Night)" 
+    title="Light Shades of Neutrals" 
+    subtitle="nNeutrals[50/100/200/300]" 
     colors={{ 
-      nightGreyLight : Colors.nightGreyLight,
-      nightGreyLighter : Colors.nightGreyLighter,
-      nightGreyExtraLight: Colors.nightGreyExtraLight,
-      nightGreyUltraLight : Colors.nightGreyUltraLight,
+      50 : nNeutrals[50],
+      100 : nNeutrals[100],
+      200 : nNeutrals[200],
+      300 : nNeutrals[300],
     }}
   />
   <ColorItem 
-    title="Colors.nightGrey... " 
-    subtitle="Dark Shades of Grey(Night)" 
+    title="Dark Shades of Neutrals" 
+    subtitle="nNeutrals[500/600/700/800]" 
     colors={{ 
-      nightGreyDark : Colors.nightGreyDark,
-      nightGreyDarker : Colors.nightGreyDarker,
-      nightGreyExtraDark : Colors.nightGreyExtraDark,
-      nightGreyUltraDark : Colors.nightGreyUltraDark, 
+      500 : nNeutrals[500],
+      600 : nNeutrals[600],
+      700 : nNeutrals[700],
+      800 : nNeutrals[800],
     }}
   />
   <ColorItem 
-    title="Colors.nightSemantic " 
-    subtitle="Semantic Colors(Night)" 
+    title="Green" 
+    subtitle="nGreen[400]" 
     colors={{ 
-      nightGreen : Colors.nightGreen,
-      nightRed : Colors.nightRed,
-      nightYellow : Colors.nightYellow,
-      nightOrange : Colors.nightOrange,
-      nightPurple: Colors.nightPurple,
+      400 : nGreen[400],
     }}
   />
   <ColorItem 
-    title="Colors.nightGreen... " 
-    subtitle="Light Shades of Green(Night)" 
+    title="Light Shades of Green" 
+    subtitle="nGreen[50/100/200/300]" 
     colors={{ 
-      nightGreenLight : Colors.nightGreenLight,
-      nightGreenLighter : Colors.nightGreenLighter,
-      nightGreenExtraLight: Colors.nightGreenExtraLight,
-      nightGreenUltraLight: Colors.nightGreenUltraLight,
+      50 : nGreen[50],
+      100 : nGreen[100],
+      200 : nGreen[200],
+      300 : nGreen[300],
     }}
   />
   <ColorItem 
-    title="Colors.nightGreen... " 
-    subtitle="Dark Shades of Green(Night)" 
+    title="Dark Shades of Green" 
+    subtitle="nGreeen[500/600/700/800]" 
     colors={{ 
-      nightGreenDark : Colors.nightGreenDark,
-      nightGreenDarker : Colors.nightGreenDarker,
-      nightGreenExtraDark : Colors.nightGreenExtraDark,
-      nightGreenUltraDark: Colors.nightGreenUltraDark,
+      500 : nGreen[500],
+      600 : nGreen[600],
+      700 : nGreen[700],
+      800 : nGreen[800],
     }}
   />
   <ColorItem 
-    title="Colors.nightRed... " 
-    subtitle="Light Shades of Red(Night)" 
+    title="Red" 
+    subtitle="nRed[400]" 
     colors={{ 
-      nightRedLight : Colors.nightRedLight,
-      nightRedLighter : Colors.nightRedLighter,
-      nightRedExtraLight : Colors.nightRedExtraLight,
-      nightRedUltraLight : Colors.nightRedUltraLight,
+      400 : nRed[400],
     }}
   />
   <ColorItem 
-    title="Colors.nightRed... " 
-    subtitle="Dark Shades of Red(Night)" 
+    title="Light Shades of Red" 
+    subtitle="nRed[50/100/200/300]" 
     colors={{ 
-      nightRedDark : Colors.nightRedDark,
-      nightRedDarker: Colors.nightRedDarker,
-      nightRedExtraDark : Colors.nightRedExtraDark,
-      nightRedUltraDark : Colors.nightRedUltraDark,
+      50 : nRed[50],
+      100 : nRed[100],
+      200 : nRed[200],
+      300 : nRed[300],
     }}
   />
   <ColorItem 
-    title="Colors.nightYellow... " 
-    subtitle="Light Shades of Yellow(Night)" 
+    title="Dark Shades of Red" 
+    subtitle="nRed[500/600/700/800]" 
     colors={{ 
-      nightYellowLight : Colors.nightYellowLight,
-      nightYellowLighter : Colors.nightYellowLighter,
-      nightYellowExtraLight : Colors.nightYellowExtraLight,
-      nightYellowUltraLight : Colors.nightYellowUltraLight,
+      500 : nRed[500],
+      600 : nRed[600],
+      700 : nRed[700],
+      800 : nRed[800],
     }}
   />
   <ColorItem 
-    title="Colors.nightYellow... " 
-    subtitle="Dark Shades of Yellow(Night)" 
+    title="Yellow" 
+    subtitle="nYellow[400]" 
     colors={{ 
-      nightYellowDark : Colors.nightYellowDark,
-      nightYellowDarker : Colors.nightYellowDarker,
-      nightYellowExtraDark: Colors.nightYellowExtraDark,
-      nightYellowUltraDark: Colors.nightYellowUltraDark,
+      400 : nYellow[400],
     }}
   />
   <ColorItem 
-    title="Colors.nightOrange... " 
-    subtitle="Light Shades of Orange(Night)" 
+    title="Light Shades of Yellow" 
+    subtitle="nYellow[50/100/200/300]" 
     colors={{ 
-      nightOrangeLight : Colors.nightOrangeLight,
-      nightOrangeLighter : Colors.nightOrangeLighter,
-      nightOrangeExtraLight: Colors.nightOrangeExtraLight,
-      nightOrangeUltraLight: Colors.nightOrangeUltraLight,
+      50 : nYellow[50],
+      100 : nYellow[100],
+      200 : nYellow[200],
+      300 : nYellow[300],
     }}
   />
   <ColorItem 
-    title="Colors.nightOrange... " 
-    subtitle="Dark Shades of Orange(Night)" 
+    title="Dark Shades of Yellow" 
+    subtitle="nYellow[500/600/700/800]" 
     colors={{ 
-      nightOrangeDark : Colors.nightOrangeDark,
-      nightOrangeDarker : Colors.nightOrangeDarker,
-      nightOrangeExtraDark: Colors.nightOrangeExtraDark,
-      nightOrangeUltraDark: Colors.nightOrangeUltraDark,
+      500 : nYellow[500],
+      600 : nYellow[600],
+      700 : nYellow[700],
+      800 : nYellow[800],
     }}
   />
   <ColorItem 
-    title="Colors.nightPurple... " 
-    subtitle="Light Shades of Purple(Night)" 
+    title="Orange" 
+    subtitle="nOrange[400]" 
     colors={{ 
-      nightPurpleLight : Colors.nightPurpleLight,
-      nightPurpleLighter : Colors.nightPurpleLighter,
-      nightPurpleExtraLight : Colors.nightPurpleExtraLight,
-      nightPurpleUltraLight : Colors.nightPurpleUltraLight,
+      400 : nOrange[400],
     }}
   />
   <ColorItem 
-    title="Colors.nightPurple... " 
-    subtitle="Dark Shades of Purple(Night)" 
+    title="Light Shades of Orange" 
+    subtitle="nOrange[50/100/200/300]" 
     colors={{ 
-      nightPurpleDark : Colors.nightPurpleDark,
-      nightPurpleDarker: Colors.nightPurpleDarker,
-      nightPurpleExtraDark : Colors.nightPurpleExtraDark,
-      nightPurpleUltraDark : Colors.nightPurpleUltraDark,
+      50 : nOrange[50],
+      100 : nOrange[100],
+      200 : nOrange[200],
+      300 : nOrange[300],
     }}
   />
-  
+  <ColorItem 
+    title="Dark Shades of Orange" 
+    subtitle="nOrange[500/600/700/800]" 
+    colors={{ 
+      500 : nOrange[500],
+      600 : nOrange[600],
+      700 : nOrange[700],
+      800 : nOrange[800],
+    }}
+  />
+  <ColorItem 
+    title="Purple" 
+    subtitle="nPurple[400]" 
+    colors={{ 
+      400 : nPurple[400],
+    }}
+  />
+  <ColorItem 
+    title="Light Shades of Purple" 
+    subtitle="nPurple[50/100/200/300]" 
+    colors={{ 
+      50 : nPurple[50],
+      100 : nPurple[100],
+      200 : nPurple[200],
+      300 : nPurple[300],
+    }}
+  />
+  <ColorItem 
+    title="Dark Shades of Purple" 
+    subtitle="nPurplee[500/600/700/800]" 
+    colors={{ 
+      500 : nPurple[500],
+      600 : nPurple[600],
+      700 : nPurple[700],
+      800 : nPurple[800],
+    }}
+  />
+</ColorPalette>
 
-
+##
+# Tints and Shades
+<ColorPalette>
+  <ColorItem 
+    title="Transparent Shades" 
+    subtitle="transShads[5/10/20/30]" 
+    colors={{ 
+      5 : transShades[5],
+      10 : transShades[10],
+      20 : transShades[20],
+      30 : transShades[30],
+    }}
+  />
+  <ColorItem 
+    title="Transparent Shades" 
+    subtitle="transShads[40/50/60/70/80]" 
+    colors={{ 
+      40 : transShades[40],
+      50 : transShades[50],
+      60 : transShades[60],
+      70 : transShades[70],
+      80 : transShades[80],
+    }}
+  />
+  <ColorItem 
+    title="Transparent Tints" 
+    subtitle="transTints[10/20/30/40]" 
+    colors={{ 
+      10 : transTints[10],
+      20 : transTints[20],
+      30 : transTints[30],
+      40 : transTints[40],
+    }}
+  />
+  <ColorItem 
+    title="Transparent Tints" 
+    subtitle="transTints[50/60/70/80/95]" 
+    colors={{ 
+      50 : transTints[50],
+      60 : transTints[60],
+      70 : transTints[70],
+      80 : transTints[80],
+      95 : transTints[95],
+    }}
+  />
 </ColorPalette>
