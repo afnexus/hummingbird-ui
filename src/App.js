@@ -1,7 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
 import Progress from './components/Progress/Progress';
-import TypographyTextBox from './theme/Typography/TypographyTextBox';
 
 function App() {
   return (
@@ -15,9 +14,6 @@ function App() {
           rel="noopener noreferrer"
         ></a>
       </header>
-
-      <TypographyTextBox type="h1" text="The quick brown fox jumps ..." />
-      <TypographyTextBox type="h2" text="The quick brown fox jumps over the ..." />
 
       <Progress value={"84"} BarBackgroundColor={"#385682"} BarColor={"#5297FF"} textColor={"#C7DDFF"}  > </Progress>
     </div>

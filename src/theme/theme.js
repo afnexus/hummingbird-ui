@@ -1,16 +1,9 @@
 import { createTheme } from '@mui/material/styles';
 // import Colors.js file here
 
-export const muitheme = createTheme({
-  palette: {
-    primary: {
-      main: '#800080',
-    },
-    secondary: {
-      main: '#edf2ff',
-    },
-  },
 
+let theme = createTheme()
+export const muitheme = createTheme( theme , {
   typography: {
     //fontSize: 12,
     fontFamily:'LatoRegular',
@@ -20,30 +13,50 @@ export const muitheme = createTheme({
       fontSize: 80,
       letterSpacing:'1.6px',
       lineHeight:'88px',
+        [theme.breakpoints.down('sm')]: { //width viewpoint below 840
+          fontSize: 48,
+          lineHeight:'56px',
+        },
     },
     h2:{
       fontFamily: 'LatoBlack',
       fontSize: 64,
       letterSpacing: '1.28px',
       lineHeight:'72px',
+        [theme.breakpoints.down('sm')]: {
+          fontSize: 32,
+          lineHeight:'40px',
+        },
     },
     h3:{
       fontFamily: 'LatoBlack',
       fontSize: 48,
       letterSpacing:'0.96px',
       lineHeight:'56px',
+        [theme.breakpoints.down('sm')]: {
+          fontSize: 24,
+          lineHeight:'32px',
+        },
     },
     h4:{
       fontFamily: 'LatoBlack',
       fontSize: 32,
       letterSpacing:'0.64px',
       lineHeight:'40px',
+        [theme.breakpoints.down('sm')]: {
+          fontSize: 22,
+          lineHeight:'30px',
+        },
     },
     h5:{
       fontFamily: 'LatoBlack',
       fontSize: 24,
       letterSpacing:'0.48px',
       lineHeight:'32px',
+        [theme.breakpoints.down('sm')]: {
+          fontSize: 19,
+          lineHeight:'27px',
+        },
     },
     h6:{
       fontFamily: 'LatoBlack',

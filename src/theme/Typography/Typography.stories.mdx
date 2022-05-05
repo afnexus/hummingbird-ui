@@ -6,165 +6,54 @@ import TypographyTextBox from './TypographyTextBox';
 
 <Meta title="Typography" />
 
-export const typography = {
-  type: {
-    primary: '"SerpentineSans", "Helvetica Neue", Helvetica, Arial, sans-serif',
-    secondary: 'LatoRegular'
-  },
-  weight: {
-    regular: '400',
-    bold: '700',
-    extrabold: '800',
-    black: '900',
-  },
-  size: {
-    s1: 12,
-    s2: 14,
-    s3: 16,
-    m1: 20,
-    m2: 24,
-    m3: 28,
-    l1: 32,
-    l2: 40,
-    l3: 48,
-    l4: 64,
-    l5: 80,
-  },
-};
 
-export const SampleText = 'AIR FORCE Lorem ipsum dolor sit amet, consectetur adipiscing elit.';
 
 # Typography
 
-**Font:** Serpentine Sans
 
-**Weights:** 400(regular), 500(medium), 700(bold), 800(extrabold), 900(black)
+## Heading
 
-
-<Typeset
-  fontSizes={[
-    Number(typography.size.s1),
-    Number(typography.size.s2),
-    Number(typography.size.s3),
-    Number(typography.size.m1),
-    Number(typography.size.m2),
-    Number(typography.size.m3),
-    Number(typography.size.l1),
-    Number(typography.size.l2),
-    Number(typography.size.l3),
-  ]}
-  fontWeight={typography.weight.black}
-  sampleText={SampleText}
-  fontFamily={typography.type.primary}
-/>
-
-## Heading 
 **Font:** Lato
 
 **Weights:** 900(black)
 
-<Typeset
-  fontSizes={[
-    Number(typography.size.l5),
-    Number(typography.size.l4),
-    Number(typography.size.l3),
-    Number(typography.size.l1),
-    Number(typography.size.m2),
-    Number(typography.size.s3),
-  ]}
-  fontWeight={typography.weight.black}
-  sampleText={SampleText}
-  fontFamily={typography.type.secondary}
-/>
+|Name|FontSize*  |LineHight*  | Example                                                                           |
+| -- | -- -- --  | -- -- --   |  -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- |
+| H1 |80px (48px)| 88px (56px)| <TypographyTextBox type="h1" text="The quick brown fox jumps over ..." />         |
+| H2 |64px (32px)| 72px (40px)| <TypographyTextBox type="h2" text="The quick brown fox jumps over the lazy ..." />|
+| H3 |48px (24px)| 56px (32px)| <TypographyTextBox type="h3" text="The quick brown fox jumps over the lazy dog" />|
+| H4 |32px (22px)| 40px (30px)| <TypographyTextBox type="h4" text="The quick brown fox jumps over the lazy dog" />|
+| H5 |24px (19px)| 32px (27px)| <TypographyTextBox type="h5" text="The quick brown fox jumps over the lazy dog" />|
+| H6 |16px       | 24px       | <TypographyTextBox type="h6" text="The quick brown fox jumps over the lazy dog" />|
+*Font size and Line height various depending on device.   _Desktop (Mobile)_
 
 
-## Body 
-**Font:** Lato
-
-**Weights:** 400(regular)
-
-<Typeset
-  fontSizes={[
-    Number(typography.size.s3),
-    Number(typography.size.s2),
-  ]}
-  fontWeight={typography.weight.regular}
-  sampleText={SampleText}
-  fontFamily={typography.type.secondary}
-/>
-
-## Subtitle 
-**Font:** Lato
-
-**Weights:** 500(medium)
-
-<Typeset
-  fontSizes={[
-    Number(typography.size.s3),
-    Number(typography.size.s2),
-  ]}
-  fontWeight={typography.weight.medium}
-  sampleText={SampleText}
-  fontFamily={typography.type.secondary}
-/>
-
-
-
-| Name     | Example                                         | FontSize | Weight |
-| -- -- -- | -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- | -- -- -- | -- --  |
-|Heading 1 | <TypographyTextBox type="h1" text="Heading 1" /> | Lato 80px| Black  |
-|Heading 2 | <TypographyTextBox type="h2" text="Heading 2" /> | Lato 64px| Black  |
-|Heading 3 | <TypographyTextBox type="h3" text="Heading 3" /> | Lato 48px| Black  |
-|Heading 4 | <TypographyTextBox type="h4" text="Heading 4" /> | Lato 32px| Black  |
-|Heading 5 | <TypographyTextBox type="h5" text="Heading 5" /> | Lato 24px| Black  |
-|Heading 6 | <TypographyTextBox type="h6" text="Heading 6" /> | Lato 16px| Black  |
-|subtitle 1| <TypographyTextBox type="subtitle1" text="subtitle 1" />  | Lato 16px| Medium  |
-|subtitle 2| <TypographyTextBox type="subtitle1" text="subtitle 2" />  | Lato 14px| Medium  |
-|Body 1    | <TypographyTextBox type="body1" text="body 1" />          | Lato 16px| Regular |
-|Body 2    | <TypographyTextBox type="body1" text="body 2" />          | Lato 14px| Regular |
-|caption   | <TypographyTextBox type="caption" text="caption 1" />      | Lato 12px| Regular |
-|inputLabel| <TypographyTextBox type="inputLabel" text="inputLabel 1" />| Lato 16px| Regular |
-|helpText  | <TypographyTextBox type="helpText" text="helpText 1" />    | Lato 12px| Regular |
-|inputText | <TypographyTextBox type="inputText" text="inputText 1" />  | Lato 16px| Regular |
-|toolTip   | <TypographyTextBox type="toolTip" text="toolTip 1" />      | Lato 14px| Regular |
-
-
-# Typography
+## Global
 
 **Font:** Lato
 
-**Weights:** 400(regular), 500(medium), 700(bold), 800(extrabold), 900(black)
+**Weights:** 400(regular), 500(medium)
 
-| Name     |FontSize| Weight | Example                                         |
-| -- -- -- | -- --  | -- --  | -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- |
-|Heading 1 | 80px   | Black  | <TypographyTextBox type="h1" text="The quick brown fox jumps ..." />|
-|Heading 2 | 64px   | Black  | <TypographyTextBox type="h2" text="The quick brown fox jumps over the ..." />|
-|Heading 3 | 48px   | Black  | <TypographyTextBox type="h3" text="The quick brown fox jumps over the lazy dog" />|
-|Heading 4 | 32px   | Black  | <TypographyTextBox type="h4" text="The quick brown fox jumps over the lazy dog" />|
-|Heading 5 | 24px   | Black  | <TypographyTextBox type="h5" text="The quick brown fox jumps over the lazy dog" />|
-|Heading 6 | 16px   | Black  | <TypographyTextBox type="h6" text="The quick brown fox jumps over the lazy dog" />|
-|subtitle 1| 16px   | Medium | <TypographyTextBox type="subtitle1" text="The quick brown fox jumps over the lazy dog" />  |
-|subtitle 2| 14px   | Medium | <TypographyTextBox type="subtitle1" text="The quick brown fox jumps over the lazy dog" />  |
-|Body 1    | 16px   | Regular| <TypographyTextBox type="body1" text="The quick brown fox jumps over the lazy dog" />          |
-|Body 2    | 14px   | Regular| <TypographyTextBox type="body1" text="The quick brown fox jumps over the lazy dog" />          |
-|caption   | 12px   | Regular| <TypographyTextBox type="caption" text="The quick brown fox jumps over the lazy dog" />     |
-|inputLabel| 16px   | Regular| <TypographyTextBox type="inputLabel" text="The quick brown fox jumps over the lazy dog" />|
-|helpText  | 12px   | Regular| <TypographyTextBox type="helpText" text="The quick brown fox jumps over the lazy dog" />    |
-|inputText | 16px   | Regular| <TypographyTextBox type="inputText" text="The quick brown fox jumps over the lazy dog" />  |
-|toolTip   | 14px   | Regular| <TypographyTextBox type="toolTip" text="The quick brown fox jumps over the lazy dog" />      |
-|Button(S) | 12px   | Bold   | <TypographyTextBox type="buttonSmall" text="The quick brown fox jumps over the lazy dog" />   |
-|Button(M) | 14px   | Bold   | <TypographyTextBox type="buttonMedium" text="The quick brown fox jumps over the lazy dog" /> |
-|Button(L) | 16px   | Bold   | <TypographyTextBox type="buttonLarge" text="The quick brown fox jumps over the lazy dog" />   |
+| Name     |FontSize|LineHight| Weight | Example                                         |
+| -- -- -- | -- --  | -- --   | -- --  | -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- |
+|subtitle 1| 16px   | 24px    | Medium | <TypographyTextBox type="subtitle1" text="The quick brown fox jumps over the lazy dog" /> |
+|subtitle 2| 14px   | 22px    | Medium | <TypographyTextBox type="subtitle2" text="The quick brown fox jumps over the lazy dog" /> |
+|body 1    | 16px   | 24px    | Regular| <TypographyTextBox type="body1" text="The quick brown fox jumps over the lazy dog" />     |
+|body 2    | 14px   | 22px    | Regular| <TypographyTextBox type="body2" text="The quick brown fox jumps over the lazy dog" />     |
+|caption   | 12px   | 20px    | Regular| <TypographyTextBox type="caption" text="The quick brown fox jumps over the lazy dog" />   |
+|inputLabel| 16px   | 24px    | Regular| <TypographyTextBox type="inputLabel" text="The quick brown fox jumps over the lazy dog" />|
+|helpText  | 12px   | 20px    | Regular| <TypographyTextBox type="helpText" text="The quick brown fox jumps over the lazy dog" />  |
+|inputText | 16px   | 24px    | Regular| <TypographyTextBox type="inputText" text="The quick brown fox jumps over the lazy dog" /> |
+|toolTip   | 14px   | 22px    | Regular| <TypographyTextBox type="toolTip" text="The quick brown fox jumps over the lazy dog" />   |
 
+## Button
 
-<TypographyTextBox type="h1" text="Heading 1" />
-<TypographyTextBox type="h2" text="Heading 2" />
-<TypographyTextBox type="h3" text="Heading 3" />
-<TypographyTextBox type="h4" text="Heading 4" />
-<TypographyTextBox type="h5" text="Heading 5" />
-<TypographyTextBox type="h6" text="Heading 6" />
+**Font:** Lato
 
-|<TypographyTextBox type="subtitle1" text="subtitle 1" />|<TypographyTextBox type="subtitle1" text="subtitle 2" />| <TypographyTextBox type="body1" text="body 1" />       | <TypographyTextBox type="body1" text="body 2" />     | 
-| -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --  | -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --  |-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --  |-- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- --  |
-|<TypographyTextBox type="caption" text="caption 1" /> |<TypographyTextBox type="inputLabel" text="input Label" />|<TypographyTextBox type="helpText" text="help Text" />|<TypographyTextBox type="inputText" text="input Text" />|
-|<TypographyTextBox type="toolTip" text="tool Tip" />  |<TypographyTextBox type="buttonSmall" text="button Small" />|<TypographyTextBox type="buttonMedium" text="button Medium" />|<TypographyTextBox type="buttonLarge" text="button Large" />|
+**Weights:** 700(bold)
+
+| Name     |FontSize|LineHight| Example                                         |
+| -- -- -- | -- --  | -- --   | -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- -- |
+|button(S) | 12px   | Auto    | <button> <TypographyTextBox type="buttonLarge" text="brown fox " /></button> |
+|button(M) | 14px   | Auto    | <button> <TypographyTextBox type="buttonMedium" text="brown fox " /></button>|
+|button(L) | 16px   | Auto    | <button> <TypographyTextBox type="buttonSmall" text="brown fox " /></button> |
