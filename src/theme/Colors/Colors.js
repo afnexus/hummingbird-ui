@@ -193,30 +193,6 @@ export const nOrange = {
     800 : '#FE7445',
 }
 
-export const transShades = {
-    80 : '#161F24',
-    70 : '#24343D',
-    60 : '#3A5461',
-    50 : '#415E6D',
-    40 : '#507386',
-    30 : '#5E889E',
-    20 : '#6D9DB6',
-    10 : '#80B8D6',
-    5 : '#8AC7E7',
-}
-
-export const transTints = {
-    95 : '#99D4F4',
-    80 : '#9ED7F4',
-    70 : '#ACDCF6',
-    60 : '#B7E1F7',
-    50 : '#C2E6F8',
-    40 : '#CDEAFA',
-    30 : '#DBF0FB',
-    20 : '#E3F3FC',
-    10 : '#EEF8FD',
-}
-
 
 export const Colors= {
     ...primary,
@@ -234,7 +210,5 @@ export const Colors= {
     ...orange,
     ...nOrange,
     ...purple,
-    ...nPurple,
-    ...transShades,
-    ...transTints,
+    ...nPurple
 }

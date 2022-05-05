@@ -1,5 +1,5 @@
 import { createTheme, ThemeProvider } from '@mui/material/styles';
-import { Colors, primary, secondary, neutrals, green, red, yellow, orange, purple, nPrimary, nSecondary, nOrange, nYellow, nRed, nPurple, nGreen, nNeutrals } from '../theme/Colors/Colors'
+import { Colors, primary, secondary, neutrals, green, red, yellow, purple, nPrimary, nSecondary, nYellow, nRed, nPurple, nGreen, nNeutrals } from '../theme/Colors/Colors'
 
 export const lightTheme = createTheme({
   palette: {
@@ -10,38 +10,26 @@ export const lightTheme = createTheme({
     },
     primary: {
       main: primary[400],
-      light : '#6276CE',
-      dark : '#00246D',
       contrastText : neutrals[50],
     },
     secondary: {
       main: secondary[400],
-      light : '#C4FFFF',
-      dark : '#5FA0C0',
       contrastText : neutrals[1000],
     },
     success: {
       main: green[600],
-      light : '#66E47C',
-      dark : '#007E20',
       contrastText: neutrals[1000],
     },
     error: {
       main : red[600],
-      light : '#FF6D63',
-      dark : '#A10011',
       contrastText : neutrals[50],
     },
     warning:{
       main : yellow[600],
-      light: '#FFFF75',
-      dark : '#C1A600',
       contrastText: neutrals[1000],
     },
     info:{
       main : purple[600],
-      light : '#CC50CF',
-      dark : '#66006E',
       contrastText : neutrals[50],
     },
     
