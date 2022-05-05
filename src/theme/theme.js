@@ -1,9 +1,12 @@
 import { createTheme } from '@mui/material/styles';
-// import Colors.js file here
+import { deepmerge } from '@mui/utils';
+import './Typography/Typography.css';
+import { Colors, primary, secondary, neutrals, green, red, yellow, purple, nPrimary, nSecondary, nYellow, nRed, nPurple, nGreen, nNeutrals } from '../theme/Colors/Colors';
 
+let theme = createTheme();
 
-let theme = createTheme()
-export const muitheme = createTheme( theme , {
+// Common settings across both light and dark themes
+const commonSettings = {
   typography: {
     //fontSize: 12,
     fontFamily:'LatoRegular',
@@ -146,7 +149,75 @@ export const muitheme = createTheme( theme , {
       letterSpacing:'0.28px',
       lineHeight:'22px',
     },
+  }
+}
 
-
+// Merging light theme palette and common settings
+export const lightTheme = createTheme(deepmerge({
+  palette: {
+    mode: "light",
+    background : {
+      paper: '#fff',
+      default : '#fff',
+    },
+    primary: {
+      main: primary[400],
+      contrastText : neutrals[50],
+    },
+    secondary: {
+      main: secondary[400],
+      contrastText : neutrals[1000],
+    },
+    success: {
+      main: green[600],
+      contrastText: neutrals[1000],
+    },
+    error: {
+      main : red[600],
+      contrastText : neutrals[50],
+    },
+    warning:{
+      main : yellow[600],
+      contrastText: neutrals[1000],
+    },
+    info:{
+      main : purple[600],
+      contrastText : neutrals[50],
+    }
   },
-});
+}, commonSettings));
+
+// Merging dark theme palette and common settings
+export const darkTheme = createTheme(deepmerge({
+  palette: {
+    mode: 'dark',
+    background : {
+      paper: '#121212',
+      default : '#121212',
+    },
+    primary: {
+      main: nPrimary[400],
+      contrastText : nNeutrals[50],
+    },
+    secondary: {
+      main: nSecondary[400],
+      contrastText : nNeutrals[900],
+    },
+    success:{
+      main : nGreen[600],
+      contrastText : nNeutrals[900],
+    },
+    error:{
+      main: nRed[600],
+      contrastText : nNeutrals[50],
+    },
+    warning:{
+      main: nYellow[600],
+      contrastText : nNeutrals[900],
+    },
+    info:{
+      main:nPurple[600],
+      contrastText : nNeutrals[50],
+    }
+  },
+}, commonSettings));

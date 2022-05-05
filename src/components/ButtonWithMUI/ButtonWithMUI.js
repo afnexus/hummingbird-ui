@@ -1,11 +1,11 @@
 import React from 'react';
 import Button from '@mui/material/Button';
 import { ThemeProvider } from '@mui/material/styles';
-import { muitheme } from '../../theme/theme';
+import { dayMode, nightMode } from '../../theme/theme';
 
 function ButtonWithMUI(props) {
     return (
-        <ThemeProvider theme={muitheme}>
+        <ThemeProvider theme={dayMode}>
             <Button variant='contained' color='primary'>{props.text}</Button>
         </ThemeProvider>
     );

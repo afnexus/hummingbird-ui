@@ -1,22 +1,31 @@
-import logo from './logo.svg';
 import './App.css';
-import Progress from './components/Progress/Progress';
+import{ React, useState } from 'react';
+import { Button, Box, Container, Typography, Paper, ThemeProvider, CssBaseline } from '@mui/material';
+import { lightTheme, darkTheme } from './theme/theme';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p> Edit <code>src/App.js</code> and save to reload. </p>
-        <a className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        ></a>
-      </header>
+    // The light theme is used by default
+    const [isDarkTheme, setIsDarkTheme] = useState(false);
 
-      <Progress value={"84"} BarBackgroundColor={"#385682"} BarColor={"#5297FF"} textColor={"#C7DDFF"}  > </Progress>
-    </div>
+    // This function is triggered when the Button component is toggled
+    const changeTheme = () => {
+      setIsDarkTheme(!isDarkTheme);
+    };
+
+  return (
+    <ThemeProvider theme={isDarkTheme ? darkTheme : lightTheme}>
+      <CssBaseline />
+      <Box display="flex" justifyContent="center" alignItems="center" minHeight="100vh">
+          <Typography variant="h1">This is a H1 text</Typography>
+          <Button 
+            variant="contained"
+            onClick= { changeTheme }
+          >
+          Click Me To Change the Theme
+          </Button>
+      </Box>
+
+    </ThemeProvider>
   );
 }
 

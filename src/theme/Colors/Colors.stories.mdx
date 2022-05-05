@@ -3,34 +3,470 @@
 <!-- https://storybook.js.org/docs/ember/writing-docs/doc-block-colorpalette -->
 
 import { Meta, ColorPalette, ColorItem } from '@storybook/addon-docs';
-import { Colors } from './Colors';
+import { Colors, primary, secondary, neutrals, green, red, yellow, orange, purple, nPrimary, nSecondary, nNeutrals, nGreen, nRed, nYellow, nPurple, nOrange, transShades, transTints} from './Colors';
 
 <Meta title="Colors" />
 
+# README :
+
+This story book consists of two color themes, Light Theme and Dark Theme. Specific Colors can be used anytime with the right name.  
+In order to switch between themes, user can use useState hooks and remember to wrap full code in ThemeProvider and CssBaseline.  
+E.g.<br /><br />
+import React, {useState} from 'react';  
+import { ThemeProvider } from '@mui/material';  
+import { lightTheme,darkTheme } from '../theme';  
+import { CssBaseline } from '@mui/material';  <br /><br />
+export const LightDark = () => {**
+    const [darkMode, setDarkMode] = useState(false);**   
+  return (
+    <ThemeProvider theme={darkMode ? darkTheme : lightTheme}>
+        <CssBaseline />
+        <ButtonWithMUI color='primary' text='Color'/>
+        <button onClick = {() => setDarkMode (!darkMode)}>switch</button>
+    </ThemeProvider>
+  )
+}
+
+<br/>
+
+
+##
+# Light Theme
+<br />
+<br />
 <ColorPalette>
   <ColorItem 
-    title="colors.primary" 
-    subtitle="DarkBlue" 
-    colors={{ DarkBlue: Colors.primary }}
+    title="Primary Color" 
+    subtitle="primary[400]" 
+    colors={{ 400 : primary[400] }}
   />
     <ColorItem 
-    title="colors.secondary" 
-    subtitle="LightBlue" 
-    colors={{ LightBlue: Colors.secondary }}
+    title="Light Shades of Primary" 
+    subtitle="primary[50/100/200/300]" 
+    colors={{
+      50 : primary[50],
+      100 : primary[100],
+      200: primary[200],
+      300: primary[300],
+     }}
   />
     <ColorItem 
-    title="colors.darkgrey" 
-    subtitle="DarkGrey" 
-    colors={{ DarkGrey: Colors.darkgrey }}
+    title="Dark Shades of Primary" 
+    subtitle="primary[500/600/700/800]" 
+    colors={{ 
+      500 : primary[500],
+      600 : primary[600],
+      700 : primary[700],
+      800 : primary[800],
+     }}
   />
     <ColorItem 
-    title="colors.lightgrey" 
-    subtitle="LightGrey" 
-    colors={{ LightGrey: Colors.lightgrey }}
+    title="Secondary Color" 
+    subtitle="secondary[400]" 
+    colors={{ 400: secondary[400] }}
   />
     <ColorItem 
-    title="colors.white" 
-    subtitle="White" 
-    colors={{ White: Colors.white }}
+    title="Light Shades of Secondary" 
+    subtitle="secondary[50/100/200/300]" 
+    colors={{ 
+      50 : secondary[50],
+      100 : secondary[100],
+      200 : secondary[200],
+      300 : secondary[300],
+    }}
+  />
+  <ColorItem 
+    title="Dark Shades of Secondary" 
+    subtitle="secondary[500/600/700/800]" 
+    colors={{ 
+      500 : secondary[500],
+      600 : secondary[600],
+      700 : secondary[700],
+      800 : secondary[800],
+    }}
+  />
+  <ColorItem 
+    title="Neutrals" 
+    subtitle="neutrals[50/500/1000]" 
+    colors={{ 
+      50 : neutrals[50],
+      500: neutrals[500],
+      1000 : neutrals[1000],
+    }}
+  />
+  <ColorItem 
+    title="Light Shades of Grey" 
+    subtitle="neutrals[100/200/300/400]" 
+    colors={{ 
+      100 : neutrals[100],
+      200 : neutrals[200],
+      300 : neutrals[300],
+      400 : neutrals[400],
+    }}
+  />
+  <ColorItem 
+    title="Dark Shades of Grey" 
+    subtitle="neutrals[600/700/800/900]" 
+    colors={{ 
+      600 : neutrals[600],
+      700 : neutrals[700],
+      800 : neutrals[800],
+      900 : neutrals[900],
+    }}
+  />
+  <ColorItem 
+    title="Green" 
+    subtitle="green[400]" 
+    colors={{ 
+      400 : green[400],
+    }}
+  />
+  <ColorItem 
+    title="Light Shades of Green" 
+    subtitle="green[50/100/200/300]" 
+    colors={{ 
+      50 : green[50],
+      100 : green[100],
+      200 : green[200],
+      300 : green[300],
+    }}
+  />
+  <ColorItem 
+    title="Dark Shades of Green" 
+    subtitle="green[500/600/700/800]" 
+    colors={{ 
+      500 : green[500],
+      600 : green[600],
+      700 : green[700],
+      800 : green[800], 
+    }}
+  />
+  <ColorItem 
+    title="Red" 
+    subtitle="red[400]" 
+    colors={{ 
+      400 : red[400],
+    }}
+  />
+  <ColorItem 
+    title="Light Shades of Red" 
+    subtitle="red[50/100/200/300]" 
+    colors={{ 
+      50 : red[50],
+      100 : red[100],
+      200 : red[200],
+      300 : red[300],
+    }}
+  />
+  <ColorItem 
+    title="Dark Shades of Red" 
+    subtitle="red[500/600/700/800]" 
+    colors={{ 
+      500 : red[500],
+      600 : red[600],
+      700 : red[700],
+      800 : red[800],
+    }}
+  />
+  <ColorItem 
+    title="Yellow" 
+    subtitle="yellow[400]" 
+    colors={{ 
+     400 : yellow[400],
+    }}
+  />
+  <ColorItem 
+    title="Light Shades of Yellow" 
+    subtitle="yellow[50/100/200/300]" 
+    colors={{ 
+      50 : yellow[50],
+      100 : yellow[100],
+      200 : yellow[200],
+      300 : yellow[300], 
+    }}
+  />
+  <ColorItem 
+    title="Dark Shades of Yellow" 
+    subtitle="yellow[500/600/700/800]" 
+    colors={{ 
+      500 : yellow[500],
+      600 : yellow[600],
+      700 : yellow[700],
+      800 : yellow[800],
+    }}
+  />
+  <ColorItem 
+    title="Orange" 
+    subtitle="orange[400]" 
+    colors={{ 
+      400 : orange[400],
+    }}
+  />
+  <ColorItem 
+    title="Light Shades of Orange" 
+    subtitle="orange[50/100/200/300]" 
+    colors={{ 
+      50 : orange[50],
+      100 : orange[100],
+      200 : orange[200],
+      300 : orange[300],
+    }}
+  />
+  <ColorItem 
+    title="Dark Shades of Orange" 
+    subtitle="orange[500/600/700/800]" 
+    colors={{ 
+      500 : orange[500],
+      600 : orange[600],
+      700 : orange[700],
+      800 : orange[800],
+    }}
+  />
+  <ColorItem 
+    title="Purple" 
+    subtitle="purple[400]" 
+    colors={{ 
+      400 : purple[400],
+    }}
+  />
+  <ColorItem 
+    title="Light Shades of Purple" 
+    subtitle="purple[50/100/200/300]" 
+    colors={{ 
+      50 : purple[50],
+      100 : purple[100],
+      200 : purple[200],
+      300 : purple[300],
+    }}
+  />
+  <ColorItem 
+    title="Dark Shades of Purple" 
+    subtitle="purple[500/600/700/800]" 
+    colors={{ 
+      500 : purple[500],
+      600 : purple[600],
+      700 : purple[700],
+      800 : purple[800],
+    }}
+  />
+</ColorPalette>
+
+##
+# Dark Theme
+<br />
+<br />
+<ColorPalette>
+  <ColorItem 
+    title="Primary" 
+    subtitle="nPrimary[400]" 
+    colors={{ 400  : nPrimary[400] }}
+  />
+  <ColorItem 
+    title="Light Shades of Primary" 
+    subtitle="nPrimary[50/100/200/300]" 
+    colors={{ 
+      50 : nPrimary[50],
+      100 : nPrimary[100],
+      200 : nPrimary[200],
+      300 : nPrimary[300],
+    }}
+  />
+  <ColorItem 
+    title="Dark Shades of Primary" 
+    subtitle="nPrimary[500/600/700/800]" 
+    colors={{ 
+      500 : nPrimary[500],
+      600 : nPrimary[600],
+      700 : nPrimary[700],
+      800 : nPrimary[800],
+    }}
+  />
+  <ColorItem 
+    title="Secondary" 
+    subtitle="nSecondary[400]" 
+    colors={{ 400 : nSecondary[400] }}
+  />
+  <ColorItem 
+    title="Light Shades of Secondary" 
+    subtitle="nSecondary[50/100/200/300]" 
+    colors={{ 
+      50 : nSecondary[50],
+      100 : nSecondary[100],
+      200 : nSecondary[200],
+      300 : nSecondary[300],
+    }}
+  />
+  <ColorItem 
+    title="Dark Shades of Secondary" 
+    subtitle="nSecondary[500/600/700/800]" 
+    colors={{ 
+      500 : nSecondary[500],
+      600 : nSecondary[600],
+      700 : nSecondary[700],
+      800 : nSecondary[800],
+    }}
+  />
+  <ColorItem 
+    title="Neutrals" 
+    subtitle="nNeutrals[400/900]" 
+    colors={{ 
+      400 : nNeutrals[400],
+      900 : nNeutrals[900],
+    }}
+  />
+  <ColorItem 
+    title="Light Shades of Neutrals" 
+    subtitle="nNeutrals[50/100/200/300]" 
+    colors={{ 
+      50 : nNeutrals[50],
+      100 : nNeutrals[100],
+      200 : nNeutrals[200],
+      300 : nNeutrals[300],
+    }}
+  />
+  <ColorItem 
+    title="Dark Shades of Neutrals" 
+    subtitle="nNeutrals[500/600/700/800]" 
+    colors={{ 
+      500 : nNeutrals[500],
+      600 : nNeutrals[600],
+      700 : nNeutrals[700],
+      800 : nNeutrals[800],
+    }}
+  />
+  <ColorItem 
+    title="Green" 
+    subtitle="nGreen[400]" 
+    colors={{ 
+      400 : nGreen[400],
+    }}
+  />
+  <ColorItem 
+    title="Light Shades of Green" 
+    subtitle="nGreen[50/100/200/300]" 
+    colors={{ 
+      50 : nGreen[50],
+      100 : nGreen[100],
+      200 : nGreen[200],
+      300 : nGreen[300],
+    }}
+  />
+  <ColorItem 
+    title="Dark Shades of Green" 
+    subtitle="nGreeen[500/600/700/800]" 
+    colors={{ 
+      500 : nGreen[500],
+      600 : nGreen[600],
+      700 : nGreen[700],
+      800 : nGreen[800],
+    }}
+  />
+  <ColorItem 
+    title="Red" 
+    subtitle="nRed[400]" 
+    colors={{ 
+      400 : nRed[400],
+    }}
+  />
+  <ColorItem 
+    title="Light Shades of Red" 
+    subtitle="nRed[50/100/200/300]" 
+    colors={{ 
+      50 : nRed[50],
+      100 : nRed[100],
+      200 : nRed[200],
+      300 : nRed[300],
+    }}
+  />
+  <ColorItem 
+    title="Dark Shades of Red" 
+    subtitle="nRed[500/600/700/800]" 
+    colors={{ 
+      500 : nRed[500],
+      600 : nRed[600],
+      700 : nRed[700],
+      800 : nRed[800],
+    }}
+  />
+  <ColorItem 
+    title="Yellow" 
+    subtitle="nYellow[400]" 
+    colors={{ 
+      400 : nYellow[400],
+    }}
+  />
+  <ColorItem 
+    title="Light Shades of Yellow" 
+    subtitle="nYellow[50/100/200/300]" 
+    colors={{ 
+      50 : nYellow[50],
+      100 : nYellow[100],
+      200 : nYellow[200],
+      300 : nYellow[300],
+    }}
+  />
+  <ColorItem 
+    title="Dark Shades of Yellow" 
+    subtitle="nYellow[500/600/700/800]" 
+    colors={{ 
+      500 : nYellow[500],
+      600 : nYellow[600],
+      700 : nYellow[700],
+      800 : nYellow[800],
+    }}
+  />
+  <ColorItem 
+    title="Orange" 
+    subtitle="nOrange[400]" 
+    colors={{ 
+      400 : nOrange[400],
+    }}
+  />
+  <ColorItem 
+    title="Light Shades of Orange" 
+    subtitle="nOrange[50/100/200/300]" 
+    colors={{ 
+      50 : nOrange[50],
+      100 : nOrange[100],
+      200 : nOrange[200],
+      300 : nOrange[300],
+    }}
+  />
+  <ColorItem 
+    title="Dark Shades of Orange" 
+    subtitle="nOrange[500/600/700/800]" 
+    colors={{ 
+      500 : nOrange[500],
+      600 : nOrange[600],
+      700 : nOrange[700],
+      800 : nOrange[800],
+    }}
+  />
+  <ColorItem 
+    title="Purple" 
+    subtitle="nPurple[400]" 
+    colors={{ 
+      400 : nPurple[400],
+    }}
+  />
+  <ColorItem 
+    title="Light Shades of Purple" 
+    subtitle="nPurple[50/100/200/300]" 
+    colors={{ 
+      50 : nPurple[50],
+      100 : nPurple[100],
+      200 : nPurple[200],
+      300 : nPurple[300],
+    }}
+  />
+  <ColorItem 
+    title="Dark Shades of Purple" 
+    subtitle="nPurplee[500/600/700/800]" 
+    colors={{ 
+      500 : nPurple[500],
+      600 : nPurple[600],
+      700 : nPurple[700],
+      800 : nPurple[800],
+    }}
   />
 </ColorPalette>
