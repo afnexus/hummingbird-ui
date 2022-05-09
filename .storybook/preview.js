@@ -1,4 +1,5 @@
 export const parameters = {
+  chromatic: { disableSnapshot: false },
   actions: { argTypesRegex: "^on[A-Z].*" },
   controls: {
     matchers: {
