@@ -3,34 +3,208 @@
 <!-- https://storybook.js.org/docs/ember/writing-docs/doc-block-colorpalette -->
 
 import { Meta, ColorPalette, ColorItem } from '@storybook/addon-docs';
-import { Colors, primary, secondary, neutrals, green, red, yellow, orange, purple, nPrimary, nSecondary, nNeutrals, nGreen, nRed, nYellow, nPurple, nOrange, transShades, transTints} from './Colors';
+import { Colors, primary, secondary, neutrals, green, red, yellow, orange, purple, nPrimary, nSecondary, nNeutrals, nGreen, nRed, nYellow, nPurple, nOrange} from './Colors';
+import ColorToggle from './ColorToggle';
+import ColorExample from './ColorExample';
 
-<Meta title="Colors" />
+<Meta title="Style/Colours"/>
 
-# README :
+# Colours
+Our MUI theme includes two color palettes, namely:
+- Light Theme (optimized for light backgrounds)
+- Dark Theme (optimized for dark backgrounds)
 
-This story book consists of two color themes, Light Theme and Dark Theme. Specific Colors can be used anytime with the right name.  
-In order to switch between themes, user can use useState hooks and remember to wrap full code in ThemeProvider and CssBaseline.  
-E.g.<br /><br />
-import React, {useState} from 'react';  
-import { ThemeProvider } from '@mui/material';  
-import { lightTheme,darkTheme } from '../theme';  
-import { CssBaseline } from '@mui/material';  <br /><br />
-export const LightDark = () => {**
-    const [darkMode, setDarkMode] = useState(false);**   
-  return (
-    <ThemeProvider theme={darkMode ? darkTheme : lightTheme}>
-        <CssBaseline />
-        <ButtonWithMUI color='primary' text='Color'/>
-        <button onClick = {() => setDarkMode (!darkMode)}>switch</button>
+You can use colors defined in Hummingbird UI's color palette in two ways.
+- [Using our MUI Theme](#using-our-mui-theme)
+- [Importing Directly From our Colour Palette](#importing-directly-from-our-colour-palette)
+
+## Using our MUI Theme
+When you wrap MUI components in our MUI theme, all components in the MUI design system will be styled in accordance to our theme.
+
+### Light Theme Usage
+Our MUI `lightTheme` custom theme consists of the following colors:
+
+<ColorPalette>
+  <ColorItem 
+    title="Primary Color" 
+    colors={{       
+      'primary' : primary[400],
+      'contrast text' : neutrals[50] 
+      }}
+  />
+  <ColorItem 
+    title="Secondary Color" 
+    colors={{       
+      'secondary' : secondary[400],
+      'contrast text' : neutrals[1000] 
+      }}
+  />
+  <ColorItem 
+  title="Semantic Colors" 
+  colors={{       
+    'success' : green[600],
+    'error' : red[600] ,
+    'warning': yellow[600],
+    'info': purple[600]
+    }}
+  />
+</ColorPalette>
+
+
+To use the <b>light theme</b> as a global style, put the following in your `App.js` file:
+```js
+    <ThemeProvider theme={lightTheme}>
+      <CssBaseline />
+
+      {/* Your code goes here */}
+
     </ThemeProvider>
-  )
-}
+```
+### Dark Theme Usage
+Our MUI `darkTheme` custom theme consists of the following colors:
+<ColorPalette>
+  <ColorItem 
+    title="Primary Color" 
+    colors={{       
+      'primary' : nPrimary[400],
+      'contrast text' : nNeutrals[50] 
+      }}
+  />
+  <ColorItem 
+    title="Secondary Color" 
+    colors={{       
+      'secondary' : nSecondary[400],
+      'contrast text' : nNeutrals[900] 
+      }}
+  />
+  <ColorItem 
+  title="Semantic Colors" 
+  colors={{       
+    'success' : nGreen[600],
+    'error' : nRed[600] ,
+    'warning': nYellow[600],
+    'info': nPurple[600]
+    }}
+  />
+</ColorPalette>
 
+To use the <b>dark theme</b> as a global style, put the following in your `App.js` file:
+```js
+    <ThemeProvider theme={darkTheme}>
+      <CssBaseline />
+
+      {/* Your code goes here */}
+
+    </ThemeProvider>
+```
+
+### Adding a Toggle Between Light and Dark Themes
+You can add a toggle between light and dark themes for your React app.
+
+An example of a toggle function between light and dark themes being applied to a button is shown below.
+
+Notice how the `Typography` and `Button` MUI components both change according to the theme.
+<ColorToggle/>
 <br/>
 
+#### Usage in Functional Components
+First, import the [`useState`](https://reactjs.org/docs/hooks-state.html) hook from the React library.
 
-##
+```js
+import { React, useState } from 'react';
+```
+
+Next, import the two themes from Hummingbird UI library in the theme directory.
+```js
+import { lightTheme, darkTheme } from '../../theme/theme';
+```
+
+Define your component and call the `useState` Hook directly inside the component. Write a function that updates the theme accordingly.
+```js
+function ColorToggle() {
+    // Declare a new state variable called 'isDarkTheme' and the function that updates it, 'setIsDarkTheme'. The light theme is used by default
+    const [isDarkTheme, setIsDarkTheme] = useState(false);
+
+    // This function is triggered when the Button component is toggled
+    const changeTheme = () => {
+      setIsDarkTheme(!isDarkTheme);
+    };
+
+    ...
+}
+```
+
+In the return statement of the component, wrap your code in MUI's `ThemeProvider` and specify both light and dark themes.
+Attach your toggle function to your desired component's event, in this case, the Button's onClick event.
+```js
+function ColorToggle() {
+  
+  ...
+  
+  return (
+    <ThemeProvider theme={isDarkTheme ? darkTheme : lightTheme}>
+      <CssBaseline />
+      <Paper>
+        <Box display="flex" justifyContent="center" alignItems="center" minHeight="40vh">
+            <Typography variant="h1">Sample</Typography>
+            <Button 
+                variant="contained"
+                onClick= { changeTheme }
+            >
+            Click Me To Change the Theme
+            </Button>
+        </Box>
+      </Paper>
+    </ThemeProvider>
+  );
+}
+```
+<br/>
+
+#### Usage in Class Components
+Usage of a color toggle in React class components do not require a `useState` Hook, as you can simply add it as a state in your constructor.
+
+```js
+class ColorToggle extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      isDarkTheme: false
+    };
+  }
+
+  render() {
+    return (
+        ...
+        <Button variant="contained" onClick={() => this.setIsDarkTheme({ this.isDarkTheme: !isDarkTheme })}>
+          Click Me To Change the Theme
+        </Button>
+        ...
+    );
+  }
+}
+```
+
+
+## Importing Directly From our Colour Palette
+For a wider variety of shades and color groups, you can also import specific colors directly from our Hummingbird UI color palette.
+
+For example, say you want you do not want your button in the predefined colors in our MUI theme, but instead want it in a specific color within our larger color palette, like so:
+<ColorExample/>
+
+Instead of using colors in the theme, you can import your desired color group from our color palette and apply it directly to your component. 
+The following example utilizes colors from the primary group, specifically in shades 50 and 800.
+```javascript
+import { primary } from './Colors';
+import { Button } from '@mui/material';
+
+function ColorExample() {
+  return (
+      <Button style={{ color: primary[800], background: primary[50] }} variant='contained'>Hello</Button>
+  );
+}
+```
+
 # Light Theme
 <br />
 <br />

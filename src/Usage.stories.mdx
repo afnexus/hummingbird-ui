@@ -1,0 +1,69 @@
+<Meta title="Usage" />
+
+# Usage of HummingBird UI v1.0
+Hummingbird UI was created for both designers and developers in mind. 
+
+Our design system includes:
+- [Figma UI Kit](#figma-ui-kit)
+- [Framer UI Kit](#framer-ui-kit)
+- [React Component Library](#react-component-library) based on MUI
+
+## For Designers
+### Figma UI Kit
+Duplicate our [UI kit on Figma](https://www.figma.com/community/file/1105337376116959518) and begin using our components!
+
+### Framer UI Kit
+Our Framer UI Kit is still pending, so do look out for it!
+
+## For Developers
+
+### React Component Library
+
+#### Install MUI
+Our React Component Library is based on [MUI](https://mui.com/), a fully-loaded component library. To utilize our component library, you would first have to install MUI.
+
+You can either follow the [installation instructions on MUI](https://mui.com/material-ui/getting-started/installation/), or follow the instructions below.
+
+To install and save in your `package.json` dependencies, run the commands below.
+
+Using <b>npm</b>:
+```bash
+npm install @mui/material @emotion/react @emotion/styled
+```
+Or <b>yarn</b>:
+
+```bash
+yarn add @mui/material @emotion/react @emotion/styled
+```
+
+#### Install Hummingbird UI
+
+#### Set MUI Custom Theme
+To use our preset MUI themes, you need to use the `ThemeProvider` and `CssBaseline ` components in order to inject a theme into your application.
+
+First, import the the `ThemeProvider` and `CssBaseline ` components from MUI.
+```js
+import { ThemeProvider, CssBaseline } from '@mui/material';
+```
+We have both light and dark themes available that you can check out in <b>Styles/Colors</b>. 
+
+To use the <b>light theme</b> as a global style, put the following in your `App.js` file:
+```js
+function App() {
+  return (
+    <ThemeProvider theme={lightTheme}>
+      <CssBaseline />
+
+      {/* Your code goes here */}
+
+    </ThemeProvider>
+  );
+}
+
+export default App;
+```
+
+#### Use MUI Components
+Now all the MUI components that you use throughout your app will be styled according to Hummingbird UI!
+
+You can use any of the components in the MUI library as demonstrated in their [official documentation](https://mui.com/material-ui/getting-started/usage/), and all of them will be stylized according to Hummingbird UI's preset themes.

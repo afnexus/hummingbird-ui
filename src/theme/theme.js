@@ -1,7 +1,7 @@
 import { createTheme } from '@mui/material/styles';
 import { deepmerge } from '@mui/utils';
 import './Typography/Typography.css';
-import { Colors, primary, secondary, neutrals, green, red, yellow, purple, nPrimary, nSecondary, nYellow, nRed, nPurple, nGreen, nNeutrals } from '../theme/Colors/Colors';
+import { Colors, primary, secondary, neutrals, green, red, yellow, purple, nPrimary, nSecondary, nYellow, nRed, nPurple, nGreen, nNeutrals } from '../style/Colors/Colors';
 
 let theme = createTheme();
 
