@@ -4,7 +4,7 @@
   "private": true,
   "resolutions": {
     "**/@emotion/styled": "^11.0.0"
-    },
+  },
   "dependencies": {
     "@emotion/react": "^11.9.0",
     "@emotion/styled": "^11.8.1",
@@ -64,6 +64,7 @@
     "@storybook/preset-create-react-app": "^4.1.0",
     "@storybook/react": "^6.4.22",
     "@storybook/testing-library": "0.0.10",
+    "chromatic": "^6.5.4",
     "webpack": "^5.72.0"
   }
 }
