@@ -1,8 +1,8 @@
 # Hummingbird UI
-A design system created by SES. 
+A design system created by SES. View the published storybook [here](https://6278e17325a15a004a7ecb09-znxvqpghxt.chromatic.com/?path=/story/usage--page)! 
 
 ## Chromatic
-Collaborators can access the published storybook via this [link](https://www.chromatic.com/builds?appId=6278e17325a15a004a7ecb09).
+Collaborators can access Chromatic via this [link](https://www.chromatic.com/builds?appId=6278e17325a15a004a7ecb09).
 
 ## Tech Stack
 Building components
