@@ -1,0 +1,50 @@
+/* Import font face */
+@font-face {
+  font-family: 'SerpentineSans';
+  src: local('SerpentineSans'), url(../../acd42efb140c2917d129.ttf) format('truetype');
+  font-weight: bold;
+}
+
+@font-face{
+  font-family: 'EurocineRegular';
+  src: local('EurocineRegular'), url(../../d3abb482a3328d338cb4.otf) format('truetype'); /*OpenType Font?*/
+}
+
+@font-face{
+  font-family: 'EurocineOblique';
+  src: local('EurocineOblique'), url(../../2179d10d22d71295482e.otf) format('truetype');
+}
+
+@font-face{
+  font-family: 'LatoBlack';
+  src: local('LatoBlack'), url(../../57dee8aface5572f9101.ttf) format('truetype');
+}
+
+@font-face{
+  font-family: 'LatoBold';
+  src: local('LatoBold'), url(../../636be8de934918e38ed9.ttf) format('truetype');
+}
+
+@font-face{
+  font-family: 'LatoRegular';
+  src: local('LatoRegular'), url(../../9d883d540ee2b4de8024.ttf) format('truetype');
+}
+
+@font-face{
+  font-family: 'LatoLight';
+  src: local('LatoLight'), url(../../c7400fcad9e48ca9043f.ttf) format('truetype');
+}
+
+@font-face{
+  font-family: 'LatoThin';
+  src: local('LatoThin'), url(../../5a60dde25d817751d590.ttf) format('truetype');
+}
+
+
+/* Create class for font face */
+.font-face-gm {
+  font-family: 'SerpentineSans';
+}
+
+
+/*# sourceMappingURL=main.054d7e95.css.map*/
