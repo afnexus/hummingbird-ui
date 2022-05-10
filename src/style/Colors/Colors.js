@@ -192,23 +192,3 @@ export const nOrange = {
     700 : '#FD8143',
     800 : '#FE7445',
 }
-
-
-export const Colors= {
-    ...primary,
-    ...nPrimary,
-    ...secondary,
-    ...nSecondary,
-    ...neutrals,
-    ...nNeutrals,
-    ...green,
-    ...nGreen,
-    ...red,
-    ...nRed,
-    ...yellow,
-    ...nYellow,
-    ...orange,
-    ...nOrange,
-    ...purple,
-    ...nPurple
-}

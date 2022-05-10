@@ -1,0 +1,11 @@
+{
+"presets": [
+    [
+        "react-app",
+        {
+        "absoluteRuntime": false
+        }
+    ],
+    "@babel/preset-react"
+]
+}
