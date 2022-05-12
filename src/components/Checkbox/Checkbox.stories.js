@@ -1,7 +1,7 @@
 import React from 'react';
 import { Checkbox, ThemeProvider } from '@mui/material';
 import { lightTheme } from '../../theme/theme';
-import { secondary } from '../../style/Colors/Colors';
+// import { secondary } from '../../style/Colors/Colors';
 import FormControlLabel from '@mui/material/FormControlLabel';
 
 
@@ -25,7 +25,7 @@ export default {
       control: { type: 'select' },
     },
     variant: {
-      options : [ 'test', 'pest'],
+      options : [ 'default','test', 'pest'],
       control : 'select',
     }
   },
