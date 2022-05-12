@@ -20,6 +20,14 @@ export default {
     label : {
       control : 'text',
     },
+    size: {
+      options: ['small', 'medium','large'],
+      control: { type: 'select' },
+    },
+    variants: {
+      options : [ 'testing1', 'testing2'],
+      control : 'select',
+    }
   },
 }
 
@@ -33,6 +41,7 @@ export const Default = Template.bind({});
 Default.args = {
   checked : true,
   disabled : false,
+  size: 'medium',
   label : 'Label'
 };
 
@@ -42,6 +51,7 @@ export const hover1 = Template.bind({});
 hover1.args = {
   checked : true,
   disabled : false,
+  size: 'medium',
   label : 'Style1',
   sx : {
     ':hover' : {
@@ -56,6 +66,7 @@ export const hover2 = Template.bind({});
 hover2.args = {
   checked : true,
   disabled : false,
+  size: 'medium',
   label : 'Style2',
   sx : {
     ':hover' : {

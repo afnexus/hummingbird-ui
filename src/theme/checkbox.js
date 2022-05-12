@@ -4,33 +4,37 @@
 
 import { secondary } from "../style/Colors/Colors"
 
-
+//cannot change any color/background color even in root...
 export const checkbox = {
-    //Name of the component
-    MuiCheckBox: {
-        variants: [
-            {
-              props: { variant: 'twitter' },
-              style: {
-                "&:hover": {
-                  backgroundColor: secondary[100],
-                },
-              },
-            },
-            {
-              props: { variant: 'facebook' },
-              style: {
-                "&:hover": {
-                  backgroundColor: secondary[400],
-                },
-              },
-            },
-          ],
-        styleOverrides: {
-        //name of the slot
-        root: {
-            
+  components: {
+    MuiCheckBox : {
+
+      styleOverrides : {
+        root : {
+          
         },
+      },
+
+      variants: [
+        {
+          props: { variant: 'testing1' },
+          style: {
+            ":hover": {
+              backgroundColor: secondary[100],
+            },
+          },
         },
+        {
+          props: { variant: 'testing2' },
+          style: {
+            ":hover": {
+              backgroundColor: secondary[400],
+            },
+          },
+        },
+      ],
+
+      
     },
+  },
 }
