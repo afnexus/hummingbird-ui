@@ -24,8 +24,8 @@ export default {
       options: ['small', 'medium','large'],
       control: { type: 'select' },
     },
-    variants: {
-      options : [ 'testing1', 'testing2'],
+    variant: {
+      options : [ 'test', 'pest'],
       control : 'select',
     }
   },
@@ -46,31 +46,31 @@ Default.args = {
 };
 
 
-export const hover1 = Template.bind({});
-// More on args: https://storybook.js.org/docs/react/writing-stories/args
-hover1.args = {
-  checked : true,
-  disabled : false,
-  size: 'medium',
-  label : 'Style1',
-  sx : {
-    ':hover' : {
-      backgroundColor : secondary[100],
-    }
-  },
-};
+// export const hover1 = Template.bind({});
+// // More on args: https://storybook.js.org/docs/react/writing-stories/args
+// hover1.args = {
+//   checked : true,
+//   disabled : false,
+//   size: 'medium',
+//   label : 'Style1',
+//   sx : {
+//     ':hover' : {
+//       backgroundColor : secondary[100],
+//     }
+//   },
+// };
 
 
-export const hover2 = Template.bind({});
-// More on args: https://storybook.js.org/docs/react/writing-stories/args
-hover2.args = {
-  checked : true,
-  disabled : false,
-  size: 'medium',
-  label : 'Style2',
-  sx : {
-    ':hover' : {
-      backgroundColor : secondary[400],
-    }
-  },
-};
+// export const hover2 = Template.bind({});
+// // More on args: https://storybook.js.org/docs/react/writing-stories/args
+// hover2.args = {
+//   checked : true,
+//   disabled : false,
+//   size: 'medium',
+//   label : 'Style2',
+//   sx : {
+//     ':hover' : {
+//       backgroundColor : secondary[400],
+//     }
+//   },
+// };
