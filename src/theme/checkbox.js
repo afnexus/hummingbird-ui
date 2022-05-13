@@ -15,28 +15,33 @@ export const checkbox = {
           },
           '&:hover' : {
             backgroundColor : secondary[100],
-          }
+          },
+          // '&:focus' : {
+          //   backgroundColor : 'black',
+          // }
         },
       },
 
-      // variants: [
-      //   {
-      //     props: { variant: 'test' },
-      //     style: {
-      //       ':hover' : {
-      //         backgroundColor: secondary[100],
-      //       },
-      //     },
-      //   },
-      //   {
-      //     props: { variant: 'pest' },
-      //     style: {
-      //       ':hover' : {
-      //         backgroundColor: secondary[400],
-      //       },
-      //     },
-      //   },
-      // ],
+      variants: [
+        {
+          props: { state: 'Focus' },
+          style: {
+            ':hover' : {
+              backgroundColor: secondary[100],
+            },
+            backgroundColor : secondary[400],
+          },
+        },
+        {
+          props: { state: 'Hover' },
+          style: {
+            ':hover' : {
+              backgroundColor: secondary[400],
+            },
+            backgroundColor : secondary[100],
+          },
+        },
+      ],
 
       
     },

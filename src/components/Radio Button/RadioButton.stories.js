@@ -22,6 +22,13 @@ export default {
         options: ['small', 'medium','large'],
         control: { type: 'select' },
     },
+    state : {
+      options : [ 'Default', 'Focus', 'Hover'],
+      control : 'radio',
+    },
+    disableRipple : {
+      control : 'boolean',
+    }
   },
 }
 
@@ -37,4 +44,5 @@ Default.args = {
     disabled : false, 
     label : '',
     size : 'medium',
+    disableRipple : false, 
 };

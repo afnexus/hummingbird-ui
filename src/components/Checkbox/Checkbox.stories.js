@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Checkbox, ThemeProvider } from '@mui/material';
 import { lightTheme } from '../../theme/theme';
-// import { secondary } from '../../style/Colors/Colors';
+import { secondary } from '../../style/Colors/Colors';
 import FormControlLabel from '@mui/material/FormControlLabel';
 
 
@@ -24,10 +24,13 @@ export default {
       options: ['small', 'medium', 'large'],
       control: { type: 'select' },
     },
-    // variant: {
-    //   options : [ 'default','test', 'pest'],
-    //   control : 'select',
-    // }
+    state : {
+      options : [ 'Default', 'Focus', 'Hover'],
+      control : 'radio',
+    },
+    disableRipple : {
+      control : 'boolean',
+    }
   },
 }
 
@@ -43,35 +46,37 @@ Default.args = {
   disabled : false,
   size: 'medium',
   label : 'Label',
-  // variant : 'default',
+  state : 'Default',
+  disableRipple : false,
 };
 
 
-// export const hover1 = Template.bind({});
-// // More on args: https://storybook.js.org/docs/react/writing-stories/args
-// hover1.args = {
-//   checked : true,
-//   disabled : false,
-//   size: 'medium',
-//   label : 'Style1',
-//   sx : {
-//     ':hover' : {
-//       backgroundColor : secondary[100],
-//     }
-//   },
-// };
+export const FocusState = Template.bind({});
+// More on args: https://storybook.js.org/docs/react/writing-stories/args
+FocusState.args = {
+  checked : true,
+  disabled : false,
+  size: 'medium',
+  label : 'Label',
+  sx : {
+    backgroundColor : secondary[400],
+    '&:hover' : {
+      backgroundColor : secondary[100],
+    }
+  }
+};
 
-
-// export const hover2 = Template.bind({});
-// // More on args: https://storybook.js.org/docs/react/writing-stories/args
-// hover2.args = {
-//   checked : true,
-//   disabled : false,
-//   size: 'medium',
-//   label : 'Style2',
-//   sx : {
-//     ':hover' : {
-//       backgroundColor : secondary[400],
-//     }
-//   },
-// };
+export const HoverState = Template.bind({});
+// More on args: https://storybook.js.org/docs/react/writing-stories/args
+HoverState.args = {
+  checked : true,
+  disabled : false,
+  size: 'medium',
+  label : 'Label',
+  sx : {
+    backgroundColor : secondary[100],
+    '&:hover' : {
+      backgroundColor : secondary[100],
+    }
+  }
+};
