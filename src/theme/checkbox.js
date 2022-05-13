@@ -10,28 +10,33 @@ export const checkbox = {
     MuiCheckbox : {
       styleOverrides : {
         root : {
-         
+          "&.Mui-focusVisible": {
+            backgroundColor: secondary[400],
+          },
+          '&:hover' : {
+            backgroundColor : secondary[100],
+          }
         },
       },
 
-      variants: [
-        {
-          props: { variant: 'test' },
-          style: {
-            ':hover' : {
-              backgroundColor: secondary[100],
-            },
-          },
-        },
-        {
-          props: { variant: 'pest' },
-          style: {
-            ':hover' : {
-              backgroundColor: secondary[400],
-            },
-          },
-        },
-      ],
+      // variants: [
+      //   {
+      //     props: { variant: 'test' },
+      //     style: {
+      //       ':hover' : {
+      //         backgroundColor: secondary[100],
+      //       },
+      //     },
+      //   },
+      //   {
+      //     props: { variant: 'pest' },
+      //     style: {
+      //       ':hover' : {
+      //         backgroundColor: secondary[400],
+      //       },
+      //     },
+      //   },
+      // ],
 
       
     },

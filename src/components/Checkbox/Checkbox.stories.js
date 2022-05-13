@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Checkbox, ThemeProvider } from '@mui/material';
 import { lightTheme } from '../../theme/theme';
 // import { secondary } from '../../style/Colors/Colors';
@@ -21,13 +21,13 @@ export default {
       control : 'text',
     },
     size: {
-      options: ['small', 'medium','large'],
+      options: ['small', 'medium', 'large'],
       control: { type: 'select' },
     },
-    variant: {
-      options : [ 'default','test', 'pest'],
-      control : 'select',
-    }
+    // variant: {
+    //   options : [ 'default','test', 'pest'],
+    //   control : 'select',
+    // }
   },
 }
 
@@ -42,7 +42,8 @@ Default.args = {
   checked : true,
   disabled : false,
   size: 'medium',
-  label : 'Label'
+  label : 'Label',
+  // variant : 'default',
 };
 
 
