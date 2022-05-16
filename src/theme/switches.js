@@ -3,23 +3,33 @@
 import { neutrals, primary } from "../style/Colors/Colors";
 import { alpha } from "@mui/material";
 
+
 export const switches = {
     components: {
         MuiSwitch: {
             styleOverrides: {
                 root: { 
-                    '& .Mui-disabled' : { color : neutrals[200]} ,
+                    '& .Mui-disabled' : {color : neutrals[200]} ,
+                    '.MuiSwitch-colorPrimary': {
+                        '&.Mui-focusVisible': {backgroundColor: alpha(primary[400],0.2)},
+                        '&:hover': {backgroundColor: alpha(primary[400],0.1)},
+                    },
                 },
             },
 
             variants: [
                 {   
-                    props: { variant: 'blue' }, 
+                    props: { state: 'focus' }, 
                     style: { 
-                        //'.MuiSwitch-colorPrimary': {':hover': {backgroundColor: "rgba(44, 75, 156, 0.2);" }},
-                        '.MuiSwitch-colorPrimary': {':hover': {backgroundColor: alpha(primary[400],0.2) }},
+                        '.MuiSwitch-colorPrimary': {backgroundColor: alpha(primary[400],0.2)},
                     },
                 },
+                {
+                    props: { state: 'hover' }, 
+                    style: { 
+                        '.MuiSwitch-colorPrimary': {backgroundColor: alpha(primary[400],0.1)},
+                    },
+                }
             ],
         },
     }

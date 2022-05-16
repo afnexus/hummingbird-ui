@@ -1,7 +1,6 @@
 import React from 'react';
-import { Switch, ThemeProvider } from '@mui/material';
+import { Switch, ThemeProvider, FormControlLabel } from '@mui/material';
 import { lightTheme } from '../../theme/theme';
-import { FormControlLabel } from '@mui/material';
 
 // More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 export default {
@@ -19,22 +18,22 @@ export default {
       control: { type: 'select' },
   },
     color: {
-      options: ['primary', 'secondary','success','error','info','warning'],
+      options: [ 	'default', 'primary', 'secondary','success','error','info','warning'],
       control: { type: 'select' },
     },
     label: {
       control: 'text',
     },
-    variant: {
-      options: ['Default', 'blue',],
-      control: { type: 'select' },
+    state: {
+      options: ['Default', 'hover', 'focus' ],
+      control: { type: 'radio' },
     },
   },
 }
 
 const Template = (args) =>
 <ThemeProvider theme={lightTheme}>
-    <FormControlLabel control={<Switch {...args} />} label={args.label} />
+  <FormControlLabel control={<Switch {...args} />} label={args.label} />
 </ThemeProvider>;
 
 export const Default = Template.bind({});
