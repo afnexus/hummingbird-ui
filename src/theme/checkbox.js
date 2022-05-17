@@ -6,8 +6,7 @@ import { secondary } from "../style/Colors/Colors"
 
 //cannot change any color/background color even in root...
 export const checkbox = {
-  components: {
-    MuiCheckbox : {
+  MuiCheckbox : {
       styleOverrides : {
         root : {
           "&.Mui-focusVisible": {
@@ -42,8 +41,5 @@ export const checkbox = {
           },
         },
       ],
-
-      
     },
-  },
-}
+  }
