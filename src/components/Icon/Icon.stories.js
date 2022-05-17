@@ -1,7 +1,8 @@
 import React from 'react';
-import { Icon, ThemeProvider } from '@mui/material';
+import { Icon, ThemeProvider, SvgIcon, IconButton } from '@mui/material';
 import { lightTheme } from '../../theme/theme';
 import DeleteIcon from '@mui/icons-material/Delete';
+import Delete from '@mui/icons-material/Delete';
 
 export default {
   title: 'Components/Icon',
@@ -12,24 +13,37 @@ export default {
       control: { type: 'select' },
   },
     color: {
-      options: ['inherit', 'action', 'disabled', 'primary', 'secondary','success','error','info','warning'],
+      options: ['inherit', 'default', 'primary', 'secondary','success','error','info','warning'],
       control: { type: 'select' },
     },
     state: {
       options: ['Default', 'hover', 'focus' ],
       control: { type: 'radio' },
     },
+    disabled:{
+      control: 'boolean',
+    },
   },
 }
 
+// Take icon from https://fonts.google.com/icons
 const Template = (args) =>
 <ThemeProvider theme={lightTheme}>
-    <DeleteIcon {...args}/>
+
+  <IconButton {...args}> 
+    <Delete fontSize={args.fontSize} />
+  </IconButton>
+
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"/>
+  <Icon {...args} >delete</Icon>
+  <SvgIcon {...args} component={DeleteIcon} />
+  
 </ThemeProvider>;
 
 export const Default = Template.bind({});
 Default.args = {
-  disabled: false,
   color:"primary",
-  sx: {backgroundColor:"red",borderRadius:"50%" },
+  fontSize:"medium",
+  state:"Default",
 };
