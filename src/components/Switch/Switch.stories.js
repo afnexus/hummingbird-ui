@@ -7,18 +7,12 @@ export default {
   title: 'Components/Switch',
   component: Switch,
   argTypes: {
-    checked:{
-      control: 'boolean',
-    },
-    disabled:{
-      control: 'boolean',
+    color: {
+      options: [ 	'default', 'primary', 'secondary','success','error','info','warning'],
+      control: { type: 'select' },
     },
     size: {
       options: ['small', 'medium',],
-      control: { type: 'select' },
-  },
-    color: {
-      options: [ 	'default', 'primary', 'secondary','success','error','info','warning'],
       control: { type: 'select' },
     },
     label: {
@@ -28,10 +22,14 @@ export default {
       options: ['Default', 'hover', 'focus' ],
       control: { type: 'radio' },
     },
+    disabled:{
+      control: 'boolean',
+    },
+    checked:{
+      control: 'boolean',
+    },
   },
 }
-
-
 
 
 const Template = (args) =>
@@ -42,6 +40,9 @@ const Template = (args) =>
 export const Default = Template.bind({});
 // More on args: https://storybook.js.org/docs/react/writing-stories/args
 Default.args = {
+  color: "primary",
+  size: "medium",
   label : "Label",
+  state:"Default",
   disabled: false,
 };
