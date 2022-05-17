@@ -9,7 +9,7 @@ export default {
   component: Icon,
   argTypes: {
     fontSize: {
-      options: ['inherit', 'small', 'medium', 'large'],
+      options: ['small', 'medium', 'large'],
       control: { type: 'select' },
   },
     color: {
@@ -41,4 +41,5 @@ Default.args = {
   color:"primary",
   fontSize:"medium",
   state:"Default",
+  disabled: false,
 };
