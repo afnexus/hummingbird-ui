@@ -7,6 +7,7 @@ import { typography } from './typography';
 import { checkbox } from './checkbox';
 import { switches } from './switches';
 import { lightcolorpalette, darkcolorpalette } from './colorpalette';
+import { radiobutton } from './radiobutton';
 
 // Themes overrides for components
 const components = Object.assign({}, checkbox, switches);
