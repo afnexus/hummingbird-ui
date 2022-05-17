@@ -2,7 +2,6 @@ import { secondary } from "../style/Colors/Colors"
 
 
 export const radiobutton = {
-    components : {
         MuiRadio : {
             styleOverrides : {
                 root : {
@@ -37,4 +36,3 @@ export const radiobutton = {
               ],
         }
     }
-}

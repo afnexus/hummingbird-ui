@@ -1,7 +1,6 @@
 import React from 'react';
 import { Checkbox, ThemeProvider } from '@mui/material';
 import { lightTheme } from '../../theme/theme';
-import { secondary } from '../../style/Colors/Colors';
 import FormControlLabel from '@mui/material/FormControlLabel';
 
 
@@ -21,16 +20,17 @@ export default {
       control : 'text',
     },
     size: {
-      options: ['small', 'medium', 'large'],
+      options: ['small', 'medium','large'],
       control: { type: 'select' },
     },
-    state : {
-      options : [ 'Default', 'Focus', 'Hover'],
-      control : 'radio',
+    variant: {
+      options : [ 'light', 'darker'],
+      control : 'select',
     },
-    disableRipple : {
-      control : 'boolean',
-    }
+    color: {
+      options: ['primary', 'secondary','success','error','info','warning'],
+      control: { type: 'select' },
+    },
   },
 }
 
@@ -45,38 +45,5 @@ Default.args = {
   checked : true,
   disabled : false,
   size: 'medium',
-  label : 'Label',
-  state : 'Default',
-  disableRipple : false,
-};
-
-
-export const FocusState = Template.bind({});
-// More on args: https://storybook.js.org/docs/react/writing-stories/args
-FocusState.args = {
-  checked : true,
-  disabled : false,
-  size: 'medium',
-  label : 'Label',
-  sx : {
-    backgroundColor : secondary[400],
-    '&:hover' : {
-      backgroundColor : secondary[100],
-    }
-  }
-};
-
-export const HoverState = Template.bind({});
-// More on args: https://storybook.js.org/docs/react/writing-stories/args
-HoverState.args = {
-  checked : true,
-  disabled : false,
-  size: 'medium',
-  label : 'Label',
-  sx : {
-    backgroundColor : secondary[100],
-    '&:hover' : {
-      backgroundColor : secondary[100],
-    }
-  }
+  label : 'Label'
 };
