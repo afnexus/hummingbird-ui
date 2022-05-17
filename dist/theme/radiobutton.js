@@ -3,15 +3,12 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.checkbox = void 0;
+exports.radiobutton = void 0;
 
 var _Colors = require("../style/Colors/Colors");
 
-//refer to https://mui.com/material-ui/customization/theme-components/
-//refer to https://mui.com/material-ui/react-switch/
-//cannot change any color/background color even in root...
-var checkbox = {
-  MuiCheckbox: {
+var radiobutton = {
+  MuiRadio: {
     styleOverrides: {
       root: {
         "&.Mui-focusVisible": {
@@ -19,10 +16,7 @@ var checkbox = {
         },
         '&:hover': {
           backgroundColor: _Colors.secondary[100]
-        } // '&:focus' : {
-        //   backgroundColor : 'black',
-        // }
-
+        }
       }
     },
     variants: [{
@@ -48,4 +42,4 @@ var checkbox = {
     }]
   }
 };
-exports.checkbox = checkbox;
+exports.radiobutton = radiobutton;

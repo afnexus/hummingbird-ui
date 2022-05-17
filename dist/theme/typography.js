@@ -11,6 +11,7 @@ var _defineProperty2 = _interopRequireDefault(require("@babel/runtime/helpers/es
 
 var _styles = require("@mui/material/styles");
 
+// import '../style/Typography/Typography.css';
 var theme = (0, _styles.createTheme)(); // Common settings across both light and dark themes
 
 var typography = {

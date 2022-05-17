@@ -13,14 +13,16 @@ var _material = require("@mui/material");
 
 var _theme = require("../../theme/theme");
 
+var _Radio = _interopRequireDefault(require("@mui/material/Radio"));
+
 var _FormControlLabel = _interopRequireDefault(require("@mui/material/FormControlLabel"));
 
 var _Colors = require("../../style/Colors/Colors");
 
 // More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 var _default = {
-  title: 'Components/Checkbox',
-  component: _material.Checkbox,
+  title: 'Components/RadioButton',
+  component: _Radio.default,
   argTypes: {
     checked: {
       control: 'boolean'
@@ -58,7 +60,7 @@ var Template = function Template(args) {
   return /*#__PURE__*/_react.default.createElement(_material.ThemeProvider, {
     theme: _theme.lightTheme
   }, /*#__PURE__*/_react.default.createElement(_FormControlLabel.default, {
-    control: /*#__PURE__*/_react.default.createElement(_material.Checkbox, args),
+    control: /*#__PURE__*/_react.default.createElement(_Radio.default, args),
     label: args.label
   }));
 };

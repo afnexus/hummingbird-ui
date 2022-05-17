@@ -13,27 +13,23 @@ var _material = require("@mui/material");
 
 var _theme = require("../../theme/theme");
 
-var _Colors = require("../../style/Colors/Colors");
+var _Delete = _interopRequireDefault(require("@mui/icons-material/Delete"));
 
-// More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 var _default = {
-  title: 'Components/Switch',
-  component: _material.Switch,
+  title: 'Components/Icon',
+  component: _material.Icon,
   argTypes: {
+    fontSize: {
+      options: ['small', 'medium', 'large'],
+      control: {
+        type: 'select'
+      }
+    },
     color: {
-      options: ['default', 'primary', 'secondary', 'success', 'error', 'info', 'warning'],
+      options: ['inherit', 'default', 'primary', 'secondary', 'success', 'error', 'info', 'warning'],
       control: {
         type: 'select'
       }
-    },
-    size: {
-      options: ['small', 'medium'],
-      control: {
-        type: 'select'
-      }
-    },
-    label: {
-      control: 'text'
     },
     state: {
       options: ['Default', 'hover', 'focus'],
@@ -43,30 +39,25 @@ var _default = {
     },
     disabled: {
       control: 'boolean'
-    },
-    checked: {
-      control: 'boolean'
     }
   }
-};
+}; // Take icon from https://fonts.google.com/icons
+
 exports.default = _default;
 
 var Template = function Template(args) {
   return /*#__PURE__*/_react.default.createElement(_material.ThemeProvider, {
     theme: _theme.lightTheme
-  }, /*#__PURE__*/_react.default.createElement(_material.FormControlLabel, {
-    control: /*#__PURE__*/_react.default.createElement(_material.Switch, args),
-    label: args.label
-  }));
+  }, /*#__PURE__*/_react.default.createElement(_material.IconButton, args, /*#__PURE__*/_react.default.createElement(_Delete.default, {
+    fontSize: args.fontSize
+  })));
 };
 
-var Default = Template.bind({}); // More on args: https://storybook.js.org/docs/react/writing-stories/args
-
+var Default = Template.bind({});
 exports.Default = Default;
 Default.args = {
   color: "primary",
-  size: "medium",
-  label: "Label",
+  fontSize: "medium",
   state: "Default",
   disabled: false
 };
