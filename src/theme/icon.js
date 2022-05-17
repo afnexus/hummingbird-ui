@@ -1,7 +1,6 @@
 import { secondary } from "../style/Colors/Colors"
 
 export const icon = {
-    components: {
         MuiIconButton: {
             styleOverrides: {
                 root: { 
@@ -32,4 +31,3 @@ export const icon = {
             ],
         },
     }
-}

@@ -5,7 +5,6 @@ import { alpha } from "@mui/material";
 
 
 export const switches = {
-    components: {
         MuiSwitch: {
             styleOverrides: {
                 root: { 
@@ -33,4 +32,3 @@ export const switches = {
             ],
         },
     }
-}
