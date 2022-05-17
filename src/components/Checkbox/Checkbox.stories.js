@@ -1,7 +1,10 @@
 import React from 'react';
 import { Checkbox, ThemeProvider } from '@mui/material';
 import { lightTheme } from '../../theme/theme';
+<<<<<<< HEAD
 import { secondary } from '../../style/Colors/Colors';
+=======
+>>>>>>> PB
 import FormControlLabel from '@mui/material/FormControlLabel';
 
 
@@ -21,6 +24,7 @@ export default {
       control : 'text',
     },
     size: {
+<<<<<<< HEAD
       options: ['small', 'medium', 'large'],
       control: { type: 'select' },
     },
@@ -31,6 +35,19 @@ export default {
     disableRipple : {
       control : 'boolean',
     }
+=======
+      options: ['small', 'medium','large'],
+      control: { type: 'select' },
+    },
+    variant: {
+      options : [ 'light', 'darker'],
+      control : 'select',
+    },
+    color: {
+      options: ['primary', 'secondary','success','error','info','warning'],
+      control: { type: 'select' },
+    },
+>>>>>>> PB
   },
 }
 
@@ -45,6 +62,7 @@ Default.args = {
   checked : true,
   disabled : false,
   size: 'medium',
+<<<<<<< HEAD
   label : 'Label',
   state : 'Default',
   disableRipple : false,
@@ -80,3 +98,7 @@ HoverState.args = {
     }
   }
 };
+=======
+  label : 'Label'
+};
+>>>>>>> PB

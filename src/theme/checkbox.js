@@ -1,6 +1,6 @@
 //refer to https://mui.com/material-ui/customization/theme-components/
+//refer to https://mui.com/material-ui/react-switch/
 
-//refer to https://mui.com/material-ui/react-checkbox/
 
 import { secondary } from "../style/Colors/Colors"
 

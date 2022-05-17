@@ -4,13 +4,13 @@ import { deepmerge } from '@mui/utils';
 
 //local imports
 import { typography } from './typography';
-import { checkbox } from './checkbox';
 import { switches } from './switches';
+import { icon } from './icon';
 import { lightcolorpalette, darkcolorpalette } from './colorpalette';
 import { radiobutton } from './radiobutton';
 
-// Themes overrides for components
-const components = { components: Object.assign({}, checkbox, switches, radiobutton) };
+// Theme overrides for components
+const components = { components: Object.assign({}, checkbox, switches, radiobutton, icon)};
 
 // Common settings across both light and dark themes
 const commonSettings = Object.assign({}, typography, components);
