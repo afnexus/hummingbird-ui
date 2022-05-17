@@ -33,11 +33,6 @@ const Template = (args) =>
   <IconButton {...args}> 
     <Delete fontSize={args.fontSize} />
   </IconButton>
-
-
-  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"/>
-  <Icon {...args} >delete</Icon>
-  <SvgIcon {...args} component={DeleteIcon} />
   
 </ThemeProvider>;
 
