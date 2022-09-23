@@ -1,9 +1,5 @@
 const path = require("path");
-
-// tell webpack where to start bundling the javascript files
-module.exports = {
-  entry: path.join(__dirname, "src", "index.js"),
-};
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 // Define output path for the bundled file
 module.exports = {
@@ -12,14 +8,19 @@ module.exports = {
     filename: "index.js",
     path: path.resolve(__dirname, "dist"),
     globalObject: "this",
-    publicPath: "/",
+    publicPath: "auto",
     library: {
       name: "hummingbird-ui",
       type: "umd",
     },
   },
+  plugins: [new MiniCssExtractPlugin()],
   module: {
     rules: [
+      {
+        test: /\.css$/i,
+        use: [MiniCssExtractPlugin.loader, "css-loader"],
+      },
       {
         test: /\.?js$/,
         exclude: /node_modules/,
@@ -31,16 +32,8 @@ module.exports = {
         },
       },
       {
-        test: /\.ttf$/,
-        use: [
-          {
-            loader: "file-loader",
-            options: {
-              name: "[name].[ext]",
-              outputPath: "assets/fonts/",
-            },
-          },
-        ],
+        test: /\.(ttf|woff2)$/,
+        type: "asset/resource",
       },
     ],
   },
