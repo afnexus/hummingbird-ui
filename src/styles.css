@@ -1,0 +1,25 @@
+@font-face {
+  font-family: "LatoBlack";
+  src: local("LatoBlack"), url("./assets/fonts/LatoBlack.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "LatoBold";
+  src: local("LatoBold"), url("./assets/fonts/LatoBold.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "LatoLight";
+  src: local("LatoLight"), url("./assets/fonts/LatoLight.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "LatoRegular";
+  src: local("LatoRegular"),
+    url("./assets/fonts/LatoRegular.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "LatoThin";
+  src: local("LatoThin"), url("./assets/fonts/LatoThin.woff2") format("woff2");
+}

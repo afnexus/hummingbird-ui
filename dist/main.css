@@ -1,0 +1,30 @@
+@font-face {
+  font-family: "LatoBlack";
+  src: local("LatoBlack"),
+    url(e98f80f7918cf8b4a1c9.woff2) format("truetype");
+}
+
+@font-face {
+  font-family: "LatoBold";
+  src: local("LatoBold"),
+    url(7719d053edcb13eab95f.woff2) format("truetype");
+}
+
+@font-face {
+  font-family: "LatoLight";
+  src: local("LatoLight"),
+    url(97a0ce48979e94f3efe5.woff2) format("truetype");
+}
+
+@font-face {
+  font-family: "LatoRegular";
+  src: local("LatoRegular"),
+    url(57dc1083454b82f2577b.woff2) format("truetype");
+}
+
+@font-face {
+  font-family: "LatoThin";
+  src: local("LatoThin"),
+    url(248f01e0b7ea2ab923f2.woff2) format("truetype");
+}
+
